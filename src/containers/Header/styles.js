@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     display: "flex",
-    width: "1280px",
+    width: "1260px",
     height: "100%",
     flexDirection: "row",
     justifyContent: "space-between",

@@ -7,9 +7,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     height: "75px",
     maxWidth: "250px",
-    margin: "0 0.5rem",
+    padding: "0 0.5rem",
     "&:hover #liner": {
-      width: "100%",
+      width: "calc(100% + 0.5rem)",
     },
     "&:hover p": {
       color: fade(theme.palette.common.white, 0.8),
