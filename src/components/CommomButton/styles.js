@@ -9,13 +9,13 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.primary.main, 0.9),
-    width: "70%",
-    transition: `0.5s ${theme.transitions.easing.easeInOut}`,
+    transition: `0.25s ${theme.transitions.easing.easeInOut}`,
     color: "white",
     "& p": {
       marginLeft: "1.5rem",
     },
     "& svg": {
+      marginLeft: "1.25rem",
       marginRight: "1.5rem",
       color: "white",
       transition: `0.25s ${theme.transitions.easing.easeInOut}`,
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
       cursor: "pointer",
       backgroundColor: theme.palette.primary.dark,
       "& svg": {
-        marginRight: "1.25rem",
+        marginLeft: "1.5rem",
       },
     },
   },

@@ -22,12 +22,14 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     height: "100%",
     width: "100%",
+    alignItems: "flex-start",
   },
   image: {
     flexBasis: "82%",
     width: "100%",
   },
   title: {
+    width: "100%",
     backgroundImage: `linear-gradient(90deg, ${theme.palette.grey[900]} 0%, ${theme.palette.grey[900]} 50%, ${theme.palette.primary.main} 50%, ${theme.palette.primary.main} 100%)`,
     backgroundSize: "200%",
     transition: `background-position .5s ${theme.transitions.easing.easeInOut}`,

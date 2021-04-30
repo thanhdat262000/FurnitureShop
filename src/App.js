@@ -4,6 +4,7 @@ import Slider from "./components/Slider/SliderContent/Slider";
 import ListServices from "./containers/ListServices/ListServices";
 import ListServiceDetails from "./containers/ListServiceDetails/ListServiceDetails";
 import SloganBanner from "./components/SloganBanner/SloganBanner";
+import IntroModal from "./containers/IntroModal/IntroModal";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ListServices />
       <ListServiceDetails />
       <SloganBanner />
+      <IntroModal />
     </div>
   );
 }

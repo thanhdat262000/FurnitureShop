@@ -2,19 +2,25 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: "2rem",
-    padding: "2rem 0",
     width: "100%",
     display: "flex",
     justifyContent: "center",
+    alignItems: "center",
   },
   container: {
-    display: "flex",
+    margin: "7% 0",
+    position: "relative",
     maxWidth: "1260px",
     width: "80%",
-    justifyContent: "space-between",
+    height: "85%",
+    display: "flex",
     alignItems: "center",
-    flexDirection: "row",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+  },
+  image: {
+    width: "700px",
+    height: "900px",
   },
 }));
 export default useStyles;
