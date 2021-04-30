@@ -7,6 +7,7 @@ import Design2 from "../../shared/images/design2.png";
 function ListServiceDetails(props) {
   const classes = useStyles();
   const serviceDetails = [
+    { intro: true },
     { img: Design, title: "THIẾT KẾ NỘI THẤT" },
     { img: Design1, title: "THIẾT KẾ KIẾN TRÚC" },
     { img: Design2, title: "PHÂN PHỐI NỘI THẤT GỖ" },
@@ -14,9 +15,16 @@ function ListServiceDetails(props) {
   return (
     <div className={classes.root}>
       <div className={classes.container}>
-        {serviceDetails.map((serviceDetail, index) => (
-          <ServiceDetail img={serviceDetail.img} title={serviceDetail.title} />
-        ))}
+        {serviceDetails.map((serviceDetail, index) =>
+          !serviceDetail.intro ? (
+            <ServiceDetail
+              img={serviceDetail.img}
+              title={serviceDetail.title}
+            />
+          ) : (
+            <ServiceDetail intro={serviceDetail.intro} />
+          )
+        )}
       </div>
     </div>
   );

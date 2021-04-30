@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
-    backgroundColor: theme.palette.grey[300],
+    backgroundColor: theme.palette.grey[100],
     display: "flex",
     justifyContent: "center",
   },
@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     maxHeight: "200px",
     minHeight: "130px",
+    width: "80%",
     maxWidth: "1260px",
   },
 }));

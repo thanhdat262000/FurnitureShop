@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     padding: "1.5rem 2rem",
-    backgroundColor: theme.palette.grey[300],
+    backgroundColor: "inherit",
     "&:hover": {
       backgroundColor: theme.palette.common.white,
       boxShadow: theme.shadows[3],
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
   titleContent: {
     display: "flex",
     justifyContent: "space-between",
-    width: "80%",
+    width: "85%",
   },
 }));
 export default useStyles;

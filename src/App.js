@@ -3,6 +3,7 @@ import Header from "./containers/Header";
 import Slider from "./components/Slider/SliderContent/Slider";
 import ListServices from "./containers/ListServices/ListServices";
 import ListServiceDetails from "./containers/ListServiceDetails/ListServiceDetails";
+import SloganBanner from "./components/SloganBanner/SloganBanner";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Slider />
       <ListServices />
       <ListServiceDetails />
+      <SloganBanner />
     </div>
   );
 }

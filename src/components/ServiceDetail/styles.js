@@ -13,8 +13,9 @@ const useStyles = makeStyles((theme) => ({
         opacity: 1,
       },
     },
-    flexBasis: "24%",
+    flexBasis: "22%",
     transition: "0.25s",
+    textDecoration: "none",
   },
   container: {
     display: "flex",
@@ -47,6 +48,45 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     "& svg": {
       color: "white",
+    },
+  },
+  introRoot: {
+    height: "100%",
+    flexBasis: "22%",
+  },
+  introMainTitle: {
+    marginBottom: "5%",
+    display: "flex",
+    alignItems: "center",
+    "& h4": {
+      fontWeight: theme.typography.fontWeightBold,
+    },
+  },
+  introBottom: {
+    height: "50px",
+    marginTop: "5%",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: fade(theme.palette.primary.main, 0.9),
+    width: "70%",
+    transition: `0.5s ${theme.transitions.easing.easeInOut}`,
+    color: "white",
+    "& p": {
+      marginLeft: "1.5rem",
+    },
+    "& svg": {
+      marginRight: "1.5rem",
+      color: "white",
+      transition: `0.25s ${theme.transitions.easing.easeInOut}`,
+    },
+    "&:hover": {
+      cursor: "pointer",
+      backgroundColor: theme.palette.primary.dark,
+      "& svg": {
+        marginRight: "1.25rem",
+      },
     },
   },
 }));
