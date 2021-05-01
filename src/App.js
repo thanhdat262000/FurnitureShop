@@ -5,6 +5,7 @@ import ListServices from "./containers/ListServices/ListServices";
 import ListServiceDetails from "./containers/ListServiceDetails/ListServiceDetails";
 import SloganBanner from "./components/SloganBanner/SloganBanner";
 import IntroModal from "./containers/IntroModal/IntroModal";
+import ListProject from "./containers/ListProjects/ListProject";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <ListServiceDetails />
       <SloganBanner />
       <IntroModal />
+      <ListProject />
     </div>
   );
 }

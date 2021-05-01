@@ -1,9 +1,6 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import Slider1 from "../../../shared/images/slider_1.jpg";
-import Slider2 from "../../../shared/images/slider_2.jpg";
-import Slider3 from "../../../shared/images/slider_3.jpg";
 import CustomNextButton from "../CustomNextButton/CustomNextButton";
 import useStyles from "./styles";
 function Slider(props) {
@@ -31,13 +28,13 @@ function Slider(props) {
         )}
       >
         <div>
-          <img src={Slider1} alt="slider1" />
+          <img src="/img/slider_1.jpg" alt="slider1" />
         </div>
         <div>
-          <img src={Slider2} alt="slider1" />
+          <img src="/img/slider_2.jpg" alt="slider1" />
         </div>
         <div>
-          <img src={Slider3} alt="slider1" />
+          <img src="/img/slider_3.jpg" alt="slider1" />
         </div>
       </Carousel>
     </div>

@@ -2,7 +2,6 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: "2rem",
     padding: "2rem 0",
     width: "100%",
     display: "flex",

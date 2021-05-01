@@ -1,7 +1,6 @@
 import React from "react";
 import CustomModal from "../../components/Modal/CustomModal";
 import useStyles from "./styles";
-import Intro from "../../shared/images/intro.png";
 
 function IntroModal(props) {
   const classes = useStyles();
@@ -10,7 +9,7 @@ function IntroModal(props) {
       <div className={classes.container}>
         <div
           className={classes.image}
-          style={{ backgroundImage: "url(" + Intro + ")" }}
+          style={{ backgroundImage: "url(/img/intro.png)" }}
         >
           <div></div>
         </div>

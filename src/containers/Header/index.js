@@ -1,15 +1,13 @@
 import React from "react";
 import Navlink from "../../components/Navlink/Navlink";
 import useStyles from "./styles";
-import Logo from "../../shared/images/logo1.png";
 const Header = (props) => {
   const classes = useStyles();
-  console.log(Logo);
   return (
     <div className={classes.root}>
       <div className={classes.content}>
         <div>
-          <img src={Logo} alt="logo" />
+          <img src="/img/logo.png" alt="logo" />
         </div>
         <div className={classes.navLink}>
           <Navlink title="TRANG CHỦ" />
