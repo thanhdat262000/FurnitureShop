@@ -60,9 +60,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "5%",
     display: "flex",
     alignItems: "center",
-    "& h4": {
-      fontWeight: theme.typography.fontWeightBold,
-    },
   },
   introBottom: {
     height: "50px",

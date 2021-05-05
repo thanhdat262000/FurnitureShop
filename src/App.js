@@ -6,6 +6,8 @@ import ListServiceDetails from "./containers/ListServiceDetails/ListServiceDetai
 import SloganBanner from "./components/SloganBanner/SloganBanner";
 import IntroModal from "./containers/IntroModal/IntroModal";
 import ListProject from "./containers/ListProjects/ListProject";
+import ListStep from "./containers/ListStep/ListStep";
+import Footer from "./containers/Footer/Footer";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <SloganBanner />
       <IntroModal />
       <ListProject />
+      <ListStep />
+      <Footer />
     </div>
   );
 }

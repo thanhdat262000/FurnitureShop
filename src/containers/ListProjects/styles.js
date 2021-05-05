@@ -18,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
     margin: "4% 0",
   },
   title: {
-    fontWeight: theme.typography.fontWeightBold,
     marginBottom: "4%",
   },
 }));

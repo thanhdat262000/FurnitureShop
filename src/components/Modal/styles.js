@@ -19,11 +19,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "flex-start",
     justifyContent: "center",
   },
-  mainTitle: {
-    "& > p": {
-      fontWeight: theme.typography.fontWeightBold,
-    },
-  },
   mainContent: {
     marginTop: "5%",
   },

@@ -21,10 +21,5 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
   },
-  sloganMain: {
-    "& > p": {
-      fontWeight: theme.typography.fontWeightBold,
-    },
-  },
 }));
 export default useStyles;

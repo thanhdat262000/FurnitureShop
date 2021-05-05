@@ -42,11 +42,11 @@ function ListProject(props) {
     <div className={classes.root}>
       <div className={classes.container}>
         <Typography component="p" variant="h4" className={classes.title}>
-          Latest projects
+          Latest Projects
         </Typography>
         <Grid container spacing={3}>
           {listProjects.map((project, index) => (
-            <Grid item lg={4} md={6} sm={6} xs={12}>
+            <Grid item lg={4} md={6} sm={6} xs={12} key={index}>
               <Project
                 key={index}
                 img={project.img}

@@ -6,22 +6,16 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: theme.palette.grey[900],
   },
   container: {
-    margin: "7% 0",
-    position: "relative",
-    maxWidth: "1260px",
+    margin: "5% 0",
     width: "80%",
-    height: "85%",
+    maxWidth: "1260px",
+    height: "100%",
     display: "flex",
-    alignItems: "center",
     justifyContent: "space-between",
-    flexWrap: "wrap",
-  },
-  image: {
-    width: '60%',
-    maxWidth: "700px",
-    height: "900px",
+    alignItems: "flex-start",
   },
 }));
 export default useStyles;

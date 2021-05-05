@@ -5,23 +5,14 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     display: "flex",
     justifyContent: "center",
-    alignItems: "center",
+    height: "480px",
   },
   container: {
-    margin: "7% 0",
-    position: "relative",
+    margin: "4% 0",
     maxWidth: "1260px",
     width: "80%",
-    height: "85%",
     display: "flex",
-    alignItems: "center",
     justifyContent: "space-between",
-    flexWrap: "wrap",
-  },
-  image: {
-    width: '60%',
-    maxWidth: "700px",
-    height: "900px",
   },
 }));
 export default useStyles;

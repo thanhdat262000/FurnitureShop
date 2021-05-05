@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: "0.25rem",
   },
   projectName: {
-    fontWeight: theme.typography.fontWeightMedium,
+    fontWeight: theme.typography.fontWeightBold,
   },
 }));
 export default useStyles;

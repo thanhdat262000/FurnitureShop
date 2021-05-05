@@ -5,6 +5,9 @@ const theme = createMuiTheme({
     h6: {
       lineHeight: 1.2,
     },
+    h4: {
+      fontWeight: 700,
+    },
   },
   palette: {
     primary: {

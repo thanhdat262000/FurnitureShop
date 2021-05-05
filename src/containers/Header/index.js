@@ -7,7 +7,7 @@ const Header = (props) => {
     <div className={classes.root}>
       <div className={classes.content}>
         <div>
-          <img src="/img/logo.png" alt="logo" />
+          <img src="/img/logo1.png" alt="logo" />
         </div>
         <div className={classes.navLink}>
           <Navlink title="TRANG CHỦ" />

@@ -17,9 +17,10 @@ function ListServiceDetails(props) {
             <ServiceDetail
               img={serviceDetail.img}
               title={serviceDetail.title}
+              key={index}
             />
           ) : (
-            <ServiceDetail intro={serviceDetail.intro} />
+            <ServiceDetail intro={serviceDetail.intro} key={index} />
           )
         )}
       </div>
