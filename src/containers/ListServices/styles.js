@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     maxHeight: "200px",
     minHeight: "130px",
-    width: "80%",
+    width: "95%",
     maxWidth: "1260px",
   },
 }));

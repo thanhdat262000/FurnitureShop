@@ -1,5 +1,6 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
+import CommonButton from "../CommomButton/CommonButton";
 import Divider from "@material-ui/core/Divider";
 import NavigateNextOutlinedIcon from "@material-ui/icons/NavigateNextOutlined";
 import useStyles from "./styles";
@@ -17,17 +18,12 @@ function FooterInfo({ intro, title, contact, links }) {
         )}
         {contact && (
           <div className={classes.navLinkContainer}>
-            <div>
-              <Typography variant="caption">Phone: {contact.phone}</Typography>{" "}
-            </div>
-            <div>
-              <Typography variant="caption">Email: {contact.email}</Typography>{" "}
-            </div>
-            <div>
-              <Typography variant="caption">
-                Địa chỉ: {contact.address}
-              </Typography>{" "}
-            </div>
+            <Typography variant="caption">Phone: {contact.phone}</Typography>{" "}
+            <Typography variant="caption">Email: {contact.email}</Typography>{" "}
+            <Typography variant="caption">
+              Địa chỉ: {contact.address}
+            </Typography>{" "}
+            <CommonButton title="Liên hệ ngay" />
           </div>
         )}
         {links && (

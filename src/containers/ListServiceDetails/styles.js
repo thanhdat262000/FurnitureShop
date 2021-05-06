@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
     maxWidth: "1260px",
-    width: "80%",
+    width: "95%",
     justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row",

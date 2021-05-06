@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     margin: "7% 0",
     position: "relative",
     maxWidth: "1260px",
-    width: "80%",
+    width: "95%",
     height: "85%",
     display: "flex",
     alignItems: "center",
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
   },
   image: {
-    width: '60%',
+    width: "60%",
     maxWidth: "700px",
     height: "900px",
   },

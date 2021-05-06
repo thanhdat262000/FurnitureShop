@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "space-between",
     alignItems: "center",
-    height: "75px",
+    height: "calc(50% + 15px )",
     maxWidth: "250px",
     padding: "0 0.5rem",
     "&:hover #liner": {
@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     color: "white",
     transition: "0.25s ",
+    marginBottom: "40px",
   },
   "keyframes liner": {
     "0%": {

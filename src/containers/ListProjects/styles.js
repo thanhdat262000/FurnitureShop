@@ -10,7 +10,8 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     transition: "0.25s",
-    width: "90%",
+    width: "95%",
+    maxWidth: "1380px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",

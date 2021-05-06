@@ -28,13 +28,14 @@ const useStyles = makeStyles((theme) => ({
     transition: `0.25s ${theme.transitions.easing.easeInOut}`,
   },
   title: {
-    marginBottom: "5%",
+    marginBottom: "1rem",
   },
   navLinkContainer: {
     marginTop: "1rem",
     display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
+    alignItems: "flex-start",
   },
   dividerColor: {
     backgroundColor: fade(theme.palette.primary.main, 0.5),

@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import MenuIcon from "@material-ui/icons/Menu";
 import Navlink from "../../components/Navlink/Navlink";
 import useStyles from "./styles";
+import { IconButton } from "@material-ui/core";
 const Header = (props) => {
-  const classes = useStyles();
+  const [isOpen, setIsOpen] = useState(false);
+  const classes = useStyles({ open: isOpen });
+  const handleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div className={classes.root}>
       <div className={classes.content}>
-        <div>
+        <div className={classes.logo}>
           <img src="/img/logo1.png" alt="logo" />
         </div>
         <div className={classes.navLink}>
@@ -19,6 +25,9 @@ const Header = (props) => {
           <Navlink title="TIN TỨC" />
           <Navlink title="LIÊN HỆ" />
         </div>
+        <IconButton className={classes.menuIcon} onClick={handleMenu}>
+          <MenuIcon />
+        </IconButton>
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    width: "80%",
+    width: "95%",
     maxWidth: "1260px",
   },
   slogan: {
