@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     display: "flex",
     justifyContent: "center",
-    height: "480px",
+    minHeight: "480px",
   },
   container: {
     margin: "4% 0",
@@ -13,6 +13,9 @@ const useStyles = makeStyles((theme) => ({
     width: "95%",
     display: "flex",
     justifyContent: "space-between",
+    [theme.breakpoints.down(780)]: {
+      flexDirection: "column",
+    },
   },
 }));
 export default useStyles;

@@ -27,13 +27,13 @@ function Slider(props) {
           <CustomNextButton onClick={onClickHandler} title={label} />
         )}
       >
-        <div>
+        <div className={classes.imageContainer}>
           <img src="/img/slider_1.jpg" alt="slider1" />
         </div>
-        <div>
+        <div className={classes.imageContainer}>
           <img src="/img/slider_2.jpg" alt="slider1" />
         </div>
-        <div>
+        <div className={classes.imageContainer}>
           <img src="/img/slider_3.jpg" alt="slider1" />
         </div>
       </Carousel>

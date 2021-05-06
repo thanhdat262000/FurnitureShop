@@ -9,11 +9,14 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     display: "flex",
-    justifyContent: "center",
-    maxHeight: "200px",
+    justifyContent: "space-between",
+    // maxHeight: "200px",
     minHeight: "130px",
     width: "95%",
     maxWidth: "1260px",
+    [theme.breakpoints.down(780)]: {
+      flexDirection: "column",
+    },
   },
 }));
 export default useStyles;

@@ -15,6 +15,23 @@ const useStyles = makeStyles((theme) => ({
       color: fade(theme.palette.common.white, 0.8),
     },
     textDecoration: " none",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+      maxWidth: "100%",
+      alignItems: "flex-start",
+      justifyContent: "center",
+      padding: 0,
+      transition: `0.2s ${theme.transitions.easing.easeOut}`,
+      "&:hover": {
+        backgroundColor: theme.palette.primary.main,
+        "@media (hover: none)": {
+          backgroundColor: "transparent",
+        },
+      },
+      "& > div": {
+        display: "none",
+      },
+    },
   },
   liner: {
     height: "7px",
@@ -26,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     transition: "0.25s ",
     marginBottom: "40px",
+    [theme.breakpoints.down("sm")]: {
+      margin: "20px 0 20px 10px",
+    },
   },
   "keyframes liner": {
     "0%": {

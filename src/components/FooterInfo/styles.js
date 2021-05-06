@@ -8,6 +8,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     flexBasis: "23%",
     color: theme.palette.grey[500],
+    [theme.breakpoints.down('sm')]: {
+      margin: '2rem 0'
+    }
   },
   container: {
     width: "100%",

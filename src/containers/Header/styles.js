@@ -36,6 +36,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
     alignItems: "flex-end",
     [theme.breakpoints.down("sm")]: {
+      marginBottom: "40px",
+      width: "100%",
       flexDirection: "column",
       justifyContent: "flex-start",
       alignItems: "flex-start",

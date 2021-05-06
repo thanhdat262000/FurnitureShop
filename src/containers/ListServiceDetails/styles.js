@@ -14,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row",
+    [theme.breakpoints.down(780)]: {
+      flexDirection: "column",
+      alignItems: "flex-start",
+    },
   },
 }));
 export default useStyles;

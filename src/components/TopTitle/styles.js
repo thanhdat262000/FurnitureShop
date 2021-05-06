@@ -16,6 +16,11 @@ const useStyles = makeStyles((theme) => ({
     "& p": {
       color: theme.palette.primary.main,
     },
+    [theme.breakpoints.down("sm")]: {
+      "& p": {
+        fontSize: "0.75rem",
+      },
+    },
   },
 }));
 export default useStyles;

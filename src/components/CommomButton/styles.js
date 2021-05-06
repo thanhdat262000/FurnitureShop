@@ -26,6 +26,12 @@ const useStyles = makeStyles((theme) => ({
       "& svg": {
         marginLeft: "1.5rem",
       },
+      "@media (hover: none)": {
+        backgroundColor: fade(theme.palette.primary.main, 0.9),
+        "& svg": {
+          marginLeft: "1.25rem",
+        },
+      },
     },
   },
 }));

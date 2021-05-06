@@ -3,6 +3,7 @@ import { makeStyles, fade } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100%",
+    maxHeight: "500px",
     "&:hover #serviceDetailTitle": {
       backgroundPosition: "-100% 100%",
     },
@@ -16,6 +17,12 @@ const useStyles = makeStyles((theme) => ({
     flexBasis: "22%",
     transition: "0.25s",
     textDecoration: "none",
+    [theme.breakpoints.down(780)]: {
+      width: "100%",
+      flexBasis: "630px",
+      maxHeight: "700px",
+      marginBottom: "2rem",
+    },
   },
   container: {
     display: "flex",
@@ -27,6 +34,13 @@ const useStyles = makeStyles((theme) => ({
   image: {
     flexBasis: "82%",
     width: "100%",
+    objectFit: "cover",
+    [theme.breakpoints.down(780)]: {
+      // backgroundSize: "40% 100%",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      backgroundColor: theme.palette.grey[800],
+    },
   },
   title: {
     width: "100%",
@@ -55,6 +69,9 @@ const useStyles = makeStyles((theme) => ({
   introRoot: {
     height: "100%",
     flexBasis: "22%",
+    [theme.breakpoints.down(780)]: {
+      flexBasis: "20%",
+    },
   },
   introMainTitle: {
     marginBottom: "5%",

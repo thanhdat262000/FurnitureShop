@@ -5,9 +5,16 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: " center",
+    [theme.breakpoints.down(780)]: {
+      flexBasis: "380px !important",
+      width: "100%",
+    },
   },
   basis: {
     flexBasis: "23%",
+    [theme.breakpoints.down(780)]: {
+      flexBasis: '15%'
+    }
   },
   container: {
     height: "100%",
@@ -35,6 +42,9 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     margin: "0.75rem",
     fontWeight: theme.typography.fontWeightBold,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "3.25rem",
+    },
   },
   stepContent: {
     display: "flex",
@@ -42,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "flex-start",
     boxShadow: theme.shadows[4],
+    flexBasis: "70%",
   },
   stepContentContainer: {
     margin: "4rem 1.75rem 1.5rem 1.75rem",

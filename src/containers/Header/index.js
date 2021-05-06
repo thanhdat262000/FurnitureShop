@@ -3,6 +3,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Navlink from "../../components/Navlink/Navlink";
 import useStyles from "./styles";
 import { IconButton } from "@material-ui/core";
+import CloseIcon from "@material-ui/icons/Close";
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const classes = useStyles({ open: isOpen });
@@ -26,7 +27,7 @@ const Header = (props) => {
           <Navlink title="LIÊN HỆ" />
         </div>
         <IconButton className={classes.menuIcon} onClick={handleMenu}>
-          <MenuIcon />
+          {isOpen ? <CloseIcon /> : <MenuIcon />}
         </IconButton>
       </div>
     </div>

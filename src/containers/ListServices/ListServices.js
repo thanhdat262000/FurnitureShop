@@ -15,7 +15,7 @@ function ListServices(props) {
     {
       icon: <DateRangeIcon />,
       title: "Exclusive 10 years warranty",
-      titleContent: "What's included?",
+      titleContent: "What's inside?",
     },
     {
       icon: <BusinessIcon />,

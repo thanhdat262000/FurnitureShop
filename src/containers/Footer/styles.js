@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "flex-start",
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column'
+    }
   },
 }));
 export default useStyles;

@@ -6,18 +6,20 @@ import useStyles from "./styles";
 function Service({ icon, title, titleContent }) {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <a href="#" className={classes.root}>
       <div className={classes.content}>
         <div className={classes.icon}>{icon}</div>
         <div className={classes.title}>
           <Typography className={classes.titleMain}>{title}</Typography>
           <div className={classes.titleContent}>
-            <Typography>{titleContent}</Typography>
+            <Typography variant="body2" component="p">
+              {titleContent}
+            </Typography>
             <TrendingFlatIcon />
           </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 }
 

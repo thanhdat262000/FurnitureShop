@@ -6,7 +6,9 @@ function CommonButton({ title }) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Typography component="p">{title}</Typography>
+      <Typography component="p" variant="body2">
+        {title}
+      </Typography>
       <TrendingFlatIcon />
     </div>
   );

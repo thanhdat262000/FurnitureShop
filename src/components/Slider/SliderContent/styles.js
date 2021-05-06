@@ -5,5 +5,12 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: "590px",
     position: "relative",
   },
+  imageContainer: {
+    height: "560px",
+    "& > img": {
+      height: "100%",
+      objectFit: "cover",
+    },
+  },
 }));
 export default useStyles;

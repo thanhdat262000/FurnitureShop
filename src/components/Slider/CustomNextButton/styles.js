@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
     transition: `background-position .2s ${theme.transitions.easing.easeInOut}`,
     "&:hover": {
       backgroundPosition: (props) => (props.prev ? "-100% 100%" : "100% -100%"),
+      "@media (hover: none)": {
+        backgroundPosition: (props) => (props.prev ? "0% 100%" : "0% 100%"),
+      },
     },
   },
   icon: {

@@ -15,11 +15,18 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     width: "95%",
     maxWidth: "1260px",
+    [theme.breakpoints.down(780)]: {
+      flexDirection: "column",
+    },
   },
   slogan: {
     width: "48%",
     display: "flex",
     flexDirection: "column",
+    [theme.breakpoints.down(780)]: {
+      width: "100%",
+      margin: "1rem 0",
+    },
   },
 }));
 export default useStyles;
