@@ -2,7 +2,6 @@ import React from "react";
 import { Typography } from "@material-ui/core";
 import AddIcon from "@material-ui/icons/Add";
 import useStyles from "./styles";
-import TrendingFlatIcon from "@material-ui/icons/TrendingFlat";
 import TopTitle from "../TopTitle/TopTitle";
 import CommonButton from "../CommomButton/CommonButton";
 function ServiceDetail({ img, title, intro }) {

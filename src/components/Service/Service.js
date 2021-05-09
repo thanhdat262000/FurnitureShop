@@ -1,5 +1,4 @@
 import React from "react";
-import StarBorderIcon from "@material-ui/icons/StarBorder";
 import TrendingFlatIcon from "@material-ui/icons/TrendingFlat";
 import { Typography } from "@material-ui/core";
 import useStyles from "./styles";

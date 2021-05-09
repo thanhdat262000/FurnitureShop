@@ -1,5 +1,4 @@
 import React from "react";
-import { NextIcon } from "../../../shared/icons/index";
 import useStyles from "./styles";
 import NavigateNextOutlinedIcon from "@material-ui/icons/NavigateNextOutlined";
 function CustomNextButton(props) {
