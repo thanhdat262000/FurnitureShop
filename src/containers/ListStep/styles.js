@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     margin: "4% 0",
-    maxWidth: "1260px",
+    maxWidth: "1180px",
     width: "95%",
     display: "flex",
     justifyContent: "space-between",

@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     margin: "7% 0",
     position: "relative",
-    maxWidth: "1260px",
+    maxWidth: "1180px",
     width: "95%",
     height: "85%",
     display: "flex",
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(780)]: {
       maxWidth: "700px",
       width: "100%",
-      backgroundPosition: "center center"
+      backgroundPosition: "center center",
     },
   },
 }));

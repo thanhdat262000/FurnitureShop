@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     width: "95%",
-    maxWidth: "1260px",
+    maxWidth: "1180px",
     [theme.breakpoints.down(780)]: {
       flexDirection: "column",
     },

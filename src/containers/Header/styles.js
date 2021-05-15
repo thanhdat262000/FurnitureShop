@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "40px",
     width: "95%",
     display: "flex",
-    maxWidth: "1260px",
+    maxWidth: "1180px",
     height: "100%",
     flexDirection: "row",
     justifyContent: "space-between",

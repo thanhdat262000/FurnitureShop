@@ -8,20 +8,32 @@ import IntroModal from "./containers/IntroModal/IntroModal";
 import ListProject from "./containers/ListProjects/ListProject";
 import ListStep from "./containers/ListStep/ListStep";
 import Footer from "./containers/Footer/Footer";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import OpeningModal from "./containers/OpeningModal/OpeningModal";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Slider />
-      <ListServices />
-      <ListServiceDetails />
-      <SloganBanner />
-      <IntroModal />
-      <ListProject />
-      <ListStep />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route path="/about">
+            <OpeningModal />
+          </Route>
+          <Route path="/">
+            <Slider />
+            <ListServices />
+            <ListServiceDetails />
+            <SloganBanner />
+            <IntroModal />
+            <ListProject />
+            <ListStep />
+          </Route>
+        </Switch>
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

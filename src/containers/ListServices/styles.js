@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     // maxHeight: "200px",
     minHeight: "130px",
     width: "95%",
-    maxWidth: "1260px",
+    maxWidth: "1180px",
     [theme.breakpoints.down(780)]: {
       flexDirection: "column",
     },
