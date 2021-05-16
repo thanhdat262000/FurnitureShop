@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     transition: `0.5s ${theme.transitions.easing.easeInOut}`,
   },
   content: {
-    marginTop: "40px",
+    marginTop: "30px",
     width: "95%",
     display: "flex",
     maxWidth: "1180px",
@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
     alignItems: "flex-end",
     [theme.breakpoints.down("sm")]: {
-      marginBottom: "40px",
+      marginBottom: "30px",
       width: "100%",
       flexDirection: "column",
       justifyContent: "flex-start",
@@ -49,14 +49,14 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "center",
-    marginBottom: "40px",
+    marginBottom: "30px",
   },
   menuIcon: {
     color: "white",
     "& svg": {
       fontSize: 32,
     },
-    marginBottom: "40px",
+    marginBottom: "30px",
     display: "none",
     [theme.breakpoints.down("sm")]: {
       display: "block",

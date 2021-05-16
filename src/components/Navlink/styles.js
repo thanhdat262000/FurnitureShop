@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-around",
     alignItems: "center",
-    marginBottom: "40px",
+    marginBottom: "35px",
     [theme.breakpoints.down("sm")]: { margin: 0 },
   },
   expandIcon: {

@@ -10,6 +10,8 @@ import ListStep from "./containers/ListStep/ListStep";
 import Footer from "./containers/Footer/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import OpeningModal from "./containers/OpeningModal/OpeningModal";
+import AboutContent from "./containers/AboutContent/AboutContent";
+import HomePage from "./pages/Home";
 
 function App() {
   return (
@@ -19,15 +21,10 @@ function App() {
         <Switch>
           <Route path="/about">
             <OpeningModal />
+            <AboutContent />
           </Route>
           <Route path="/">
-            <Slider />
-            <ListServices />
-            <ListServiceDetails />
-            <SloganBanner />
-            <IntroModal />
-            <ListProject />
-            <ListStep />
+            <HomePage />
           </Route>
         </Switch>
 
