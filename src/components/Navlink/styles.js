@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     height: "calc(50% + 15px )",
     maxWidth: "250px",
     paddingLeft: "1.5rem",
+    position: "relative",
     "&:hover #liner": {
       width: "calc(100% + 0.5rem)",
     },
@@ -75,21 +76,26 @@ const useStyles = makeStyles((theme) => ({
   },
   menu: {
     position: "absolute",
+    width: "250%",
     top: "100%",
+    left: "-10%",
     zIndex: "100",
     backgroundColor: "#222222",
     color: "white",
     [theme.breakpoints.down("sm")]: {
-      marginLeft: "5%",
+      marginLeft: "15%",
       position: "relative",
       width: "100%",
-      backgroundColor: "transperant",
+      backgroundColor: "transparent",
       boxShadow: "none",
     },
   },
   menuItem: {
     "&:hover": {
       backgroundColor: theme.palette.primary.main,
+      "@media (hover: none)": {
+        backgroundColor: "transparent",
+      },
     },
     marginRight: "1rem",
   },

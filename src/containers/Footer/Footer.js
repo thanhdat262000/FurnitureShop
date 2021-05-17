@@ -49,11 +49,11 @@ function Footer(props) {
       <div className={classes.container}>
         {listFooterInfo.map((info, index) =>
           info.intro ? (
-            <FooterInfo title={info.title} intro={info.intro} />
+            <FooterInfo title={info.title} intro={info.intro} key={index} />
           ) : info.links ? (
-            <FooterInfo title={info.title} links={info.links} />
+            <FooterInfo title={info.title} links={info.links} key={index} />
           ) : (
-            <FooterInfo title={info.title} contact={info.contact} />
+            <FooterInfo title={info.title} contact={info.contact} key={index} />
           )
         )}
       </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { isMobile } from "react-device-detect";
 import {
   List,
   ListItem,
@@ -14,14 +15,16 @@ function Navlink({ title, listMenu, expand, link }) {
   const classes = useStyles();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleHover = () => {
-    setIsMenuOpen(true);
-  };
-  const handleClose = () => {
-    setIsMenuOpen(false);
+    setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <div onMouseLeave={handleClose} className={classes.root}>
-      <a href={`/${link}`} onMouseEnter={handleHover} className={classes.link}>
+    <div className={classes.root} onMouseLeave={handleHover}>
+      <a
+        href={`/${link}`}
+        onMouseEnter={handleHover}
+        className={classes.link}
+        onClick={isMobile && handleHover}
+      >
         <div className={classes.titleContainer}>
           <Typography className={classes.title}>{title}</Typography>
           {expand && <ExpandMoreIcon className={classes.expandIcon} />}

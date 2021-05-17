@@ -20,7 +20,7 @@ function AboutContent(props) {
             với chúng tôi, bạn chắc chắn sẽ hài lòng về không gian sống của
             mình.
           </Typography>
-          <Typography className={classes.subTitle}>
+          <Typography variant="h5" className={classes.subTitle}>
             Tại sao NewFurniture thành lập và phát triển?
           </Typography>
           <Typography className={classes.content}>
@@ -32,7 +32,7 @@ function AboutContent(props) {
             vấn thiết kế, thi công nội thất để giúp mỗi một không gian sống của
             quý khách hàng đều trở nên tuyệt vời hơn.
           </Typography>
-          <Typography className={classes.subTitle}>
+          <Typography variant="h5" className={classes.subTitle}>
             NewFurniture mang sứ mệnh nào?
           </Typography>
           <Typography className={classes.content}>
@@ -75,7 +75,7 @@ function AboutContent(props) {
             một công ty tư vấn – thiết kế – thi công kiến trúc nội ngoại thất uy
             tín với phong cách thiết kế rất riêng chỉ có ở NewFurniture.
           </Typography>
-          <Typography className={classes.subTitle}>
+          <Typography variant="h5" className={classes.subTitle}>
             Tầm nhìn của NewFurniture luôn không ngừng vươn xa
           </Typography>
           <Typography className={classes.content}>

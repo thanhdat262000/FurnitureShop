@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
+
     backgroundColor: "#222222",
     display: "flex",
     justifyContent: "center",
@@ -36,6 +37,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
     alignItems: "flex-end",
     [theme.breakpoints.down("sm")]: {
+      maxHeight: "80vh",
+      overflowY: "auto",
+      whiteSpace: "nowrap",
+      overflowX: "hidden",
       marginBottom: "30px",
       width: "100%",
       flexDirection: "column",

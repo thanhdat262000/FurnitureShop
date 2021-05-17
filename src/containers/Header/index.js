@@ -11,11 +11,17 @@ const Header = (props) => {
     setIsOpen(!isOpen);
   };
   const listMenu = {
-    design: ["THIẾT KẾ NỘI THẤT", "THIẾT KẾ NỘI THẤT", "THIẾT KẾ NỘI THẤT"],
+    design: [
+      "THIẾT KẾ NỘI THẤT BIỆT THỰ",
+      "THIẾT KẾ NỘI THẤT KHÁCH SẠN",
+      "THIẾT KẾ NỘI THẤT CHUNG CƯ",
+      "THIẾT KẾ NỘI THẤT NHÀ PHỐ",
+    ],
     contruction: [
-      "THI CÔNG NỘI THẤT",
-      "THI CÔNG NỘI THẤT",
-      "THI CÔNG NỘI THẤT",
+      "THI CÔNG NỘI THẤT BIỆT THỰ",
+      "THI CÔNG NỘI THẤT KHÁCH SẠN",
+      "THI CÔNG NỘI THẤT CHUNG CƯ",
+      "THI CÔNG NỘI THẤT NHÀ PHỐ",
     ],
   };
   return (
