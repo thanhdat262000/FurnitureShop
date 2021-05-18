@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    textTransform: "uppercase",
     [theme.breakpoints.down("sm")]: {
       alignItems: "flex-start",
       "&:hover": {
@@ -82,6 +83,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: "100",
     backgroundColor: "#222222",
     color: "white",
+    textTransform: "uppercase",
     [theme.breakpoints.down("sm")]: {
       marginLeft: "15%",
       position: "relative",

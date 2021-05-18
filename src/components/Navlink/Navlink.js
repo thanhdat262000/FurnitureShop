@@ -15,16 +15,14 @@ function Navlink({ title, listMenu, expand, link }) {
   const classes = useStyles();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleHover = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(true);
+  };
+  const handleClose = () => {
+    setIsMenuOpen(false);
   };
   return (
-    <div className={classes.root} onMouseLeave={handleHover}>
-      <a
-        href={`/${link}`}
-        onMouseEnter={handleHover}
-        className={classes.link}
-        onClick={isMobile && handleHover}
-      >
+    <div className={classes.root} onMouseLeave={handleClose}>
+      <a href={`/${link}`} onMouseEnter={handleHover} className={classes.link}>
         <div className={classes.titleContainer}>
           <Typography className={classes.title}>{title}</Typography>
           {expand && <ExpandMoreIcon className={classes.expandIcon} />}
