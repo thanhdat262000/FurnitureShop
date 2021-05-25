@@ -9,16 +9,11 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     flexBasis: "25%",
     "&:hover": {
-      backgroundColor: theme.palette.common.white,
-      boxShadow: theme.shadows[3],
-      "& > div": {
-        margin: "6% calc(3% - 0.2rem) 6% calc(3% + 0.2rem )",
-      },
-      "@media (hover: none)": {
-        backgroundColor: "inherit",
-        boxShadow: "none",
+      "@media (hover: hover)": {
+        backgroundColor: theme.palette.common.white,
+        boxShadow: theme.shadows[3],
         "& > div": {
-          margin: "6% 3%",
+          margin: "6% calc(3% - 0.2rem) 6% calc(3% + 0.2rem )",
         },
       },
     },

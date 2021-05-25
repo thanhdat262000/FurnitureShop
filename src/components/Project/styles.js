@@ -7,8 +7,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     color: "white",
     "&:hover #project-overlay": {
-      height: "100%",
-      opacity: 1,
+      "@media (hover:hover)": {
+        height: "100%",
+        opacity: 1,
+      },
     },
     transition: "0.25s",
   },

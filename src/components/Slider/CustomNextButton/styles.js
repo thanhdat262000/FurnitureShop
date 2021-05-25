@@ -20,9 +20,8 @@ const useStyles = makeStyles((theme) => ({
     backgroundSize: "200%",
     transition: `background-position .2s ${theme.transitions.easing.easeInOut}`,
     "&:hover": {
+      "@media (hover: hover)": {
       backgroundPosition: (props) => (props.prev ? "-100% 100%" : "100% -100%"),
-      "@media (hover: none)": {
-        backgroundPosition: (props) => (props.prev ? "0% 100%" : "0% 100%"),
       },
     },
   },

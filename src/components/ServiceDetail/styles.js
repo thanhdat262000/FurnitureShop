@@ -8,11 +8,14 @@ const useStyles = makeStyles((theme) => ({
       backgroundPosition: "-100% 100%",
     },
     "&:hover": {
-      cursor: "pointer",
-      transform: "scale(1.01)",
-      "& #overlay": {
-        opacity: 1,
-      },
+      '@media (hover: hover)' : {
+        cursor: "pointer",
+        transform: "scale(1.01)",
+        "& #overlay": {
+          opacity: 1,
+        },
+      }
+     
     },
     flexBasis: "22%",
     transition: "0.25s",

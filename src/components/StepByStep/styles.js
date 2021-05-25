@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme) => ({
   basis: {
     flexBasis: "23%",
     [theme.breakpoints.down(780)]: {
-      flexBasis: '15%'
-    }
+      flexBasis: "15%",
+    },
   },
   container: {
     height: "100%",
@@ -24,9 +24,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     "&:hover ": {
-      "& #step-number": { backgroundPosition: "-100% 100%" },
-      "& #step-button": {
-        marginLeft: "0.25rem",
+      "@media (hover:hover)": {
+        "& #step-number": { backgroundPosition: "-100% 100%" },
+        "& #step-button": {
+          marginLeft: "0.25rem",
+        },
       },
     },
   },
@@ -62,6 +64,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "0.75rem",
   },
   button: {
+    cursor: "pointer",
     marginTop: "0.75rem",
     display: "flex",
     color: theme.palette.primary.main,
