@@ -17,7 +17,7 @@ function HomePage(props) {
       <ListServiceDetails />
       <SloganBanner />
       <IntroModal />
-      <ListProject />
+      <ListProject title="Latest projects" />
       <ListStep />
     </div>
   );

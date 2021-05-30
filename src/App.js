@@ -1,9 +1,9 @@
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import Header from "./containers/Header";
 import Footer from "./containers/Footer/Footer";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import OpeningModal from "./containers/OpeningModal/OpeningModal";
-import AboutContent from "./containers/AboutContent/AboutContent";
+import Header from "./containers/Header";
+import AboutPage from "./pages/About";
+import Design from "./pages/Design";
 import HomePage from "./pages/Home";
 
 function App() {
@@ -13,8 +13,10 @@ function App() {
         <Header />
         <Switch>
           <Route path="/about">
-            <OpeningModal />
-            <AboutContent />
+            <AboutPage />
+          </Route>
+          <Route path="/design">
+            <Design />
           </Route>
           <Route path="/">
             <HomePage />

@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import { isMobile } from "react-device-detect";
 import {
   List,
   ListItem,
@@ -8,8 +6,9 @@ import {
   Typography,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import useStyles from "./styles";
+import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
+import useStyles from "./styles";
 
 function Navlink({ title, listMenu, expand, link }) {
   const classes = useStyles();
@@ -49,7 +48,7 @@ function Navlink({ title, listMenu, expand, link }) {
                     className={classes.menuItem}
                     button
                     component="a"
-                    href="#"
+                    href="/"
                     key={index}
                   >
                     <ListItemText>{menu}</ListItemText>{" "}

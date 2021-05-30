@@ -26,7 +26,6 @@ const Header = (props) => {
       title: "thiết kế",
       expand: true,
       listSubMenu: [
-        "thiết kế nội thất biệt thự",
         "thiết kế nội thất chung cư",
         "thiết kế nội thất khách sạn",
         "thiết kế nội thất nhà phố",
@@ -37,7 +36,6 @@ const Header = (props) => {
       title: "thi công",
       expand: true,
       listSubMenu: [
-        "thi công nội thất biệt thự",
         "thi công nội thất chung cư",
         "thi công nội thất khách sạn",
         "thi công nội thất nhà phố",
