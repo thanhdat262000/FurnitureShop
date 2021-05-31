@@ -1,5 +1,6 @@
 import React from "react";
 import DesignContent from "../../containers/DesignContent/DesignContent";
+import ListProject from "../../containers/ListProjects/ListProject";
 import OpeningModal from "../../containers/OpeningModal/OpeningModal";
 
 function Design(props) {
@@ -11,6 +12,7 @@ function Design(props) {
         content="We are proud to present our work. These projects are built using latest technologies and best talents. The benefits of our methods guarantee quality for many years to come."
       />
       <DesignContent />
+      <ListProject title="Một số dự án thiết kế nội thất" type="design" />
     </div>
   );
 }

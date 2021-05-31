@@ -4,9 +4,9 @@ import clsx from "clsx";
 import React, { useState } from "react";
 import Project from "../../components/Project/Project";
 import useStyles from "./styles";
-function ListProject({ title }) {
+function ListProject({ title, multipleTypes, type }) {
   const classes = useStyles();
-  const [curCategory, setCurCategory] = useState("design");
+  const [curCategory, setCurCategory] = useState(type);
   const listProjects = [
     {
       type: "design",
@@ -123,23 +123,25 @@ function ListProject({ title }) {
         <Typography component="p" variant="h4" className={classes.title}>
           {title}
         </Typography>
-        <div className={classes.categoryRoot}>
-          <div className={classes.categoryContainer}>
-            {categories.map((category, index) => (
-              <div
-                className={clsx({
-                  [classes.categoryComponent]: true,
-                  [classes.categoryComponentActive]:
-                    category.id === curCategory,
-                })}
-                key={index}
-                onClick={() => onCategoryClick(category.id)}
-              >
-                <Typography>{category.name}</Typography>
-              </div>
-            ))}
+        {multipleTypes && (
+          <div className={classes.categoryRoot}>
+            <div className={classes.categoryContainer}>
+              {categories.map((category, index) => (
+                <div
+                  className={clsx({
+                    [classes.categoryComponent]: true,
+                    [classes.categoryComponentActive]:
+                      category.id === curCategory,
+                  })}
+                  key={index}
+                  onClick={() => onCategoryClick(category.id)}
+                >
+                  <Typography>{category.name}</Typography>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
         <Grid container spacing={3}>
           {listProjects
             .filter((list) => list.type === curCategory)[0]

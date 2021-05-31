@@ -31,10 +31,9 @@ function CustomDrawer({
         <List>
           {listMenu.map((menu, index) =>
             menu.expand ? (
-              <>
+              <div key={index}>
                 <ListItem
                   className={clsx(classes.link, classes.linkText)}
-                  key={index}
                   button
                   onClick={
                     menu.title === "thiết kế"
@@ -75,7 +74,7 @@ function CustomDrawer({
                     ))}
                   </List>
                 </Collapse>{" "}
-              </>
+              </div>
             ) : (
               <ListItem
                 key={index}
