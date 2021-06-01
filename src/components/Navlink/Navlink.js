@@ -48,10 +48,10 @@ function Navlink({ title, listMenu, expand, link }) {
                     className={classes.menuItem}
                     button
                     component="a"
-                    href="/"
+                    href={`/${menu.link}`}
                     key={index}
                   >
-                    <ListItemText>{menu}</ListItemText>{" "}
+                    <ListItemText>{menu.title}</ListItemText>{" "}
                   </ListItem>
                 ))}
             </List>

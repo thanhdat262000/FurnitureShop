@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import ContactButton from "./components/ContactButton/ContactButton";
 import Footer from "./containers/Footer/Footer";
 import Header from "./containers/Header";
 import AboutPage from "./pages/About";
@@ -22,7 +23,7 @@ function App() {
             <HomePage />
           </Route>
         </Switch>
-
+        <ContactButton />
         <Footer />
       </div>
     </Router>
