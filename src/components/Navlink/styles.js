@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   liner: {
-    height: "7px",
+    height: "5px",
     width: "0",
     backgroundColor: theme.palette.primary.main,
     transition: "0.25s ",

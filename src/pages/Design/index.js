@@ -3,7 +3,7 @@ import DesignContent from "../../containers/DesignContent/DesignContent";
 import ListProject from "../../containers/ListProjects/ListProject";
 import OpeningModal from "../../containers/OpeningModal/OpeningModal";
 
-function Design(props) {
+function DesignPage(props) {
   return (
     <div>
       <OpeningModal
@@ -17,4 +17,4 @@ function Design(props) {
   );
 }
 
-export default Design;
+export default DesignPage;

@@ -4,7 +4,8 @@ import ContactButton from "./components/ContactButton/ContactButton";
 import Footer from "./containers/Footer/Footer";
 import Header from "./containers/Header";
 import AboutPage from "./pages/About";
-import Design from "./pages/Design";
+import ContactPage from "./pages/Contact";
+import DesignPage from "./pages/Design";
 import HomePage from "./pages/Home";
 
 function App() {
@@ -17,7 +18,10 @@ function App() {
             <AboutPage />
           </Route>
           <Route path="/design">
-            <Design />
+            <DesignPage />
+          </Route>
+          <Route path="/contact">
+            <ContactPage />
           </Route>
           <Route path="/">
             <HomePage />

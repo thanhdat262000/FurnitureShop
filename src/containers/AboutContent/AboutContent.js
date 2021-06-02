@@ -88,7 +88,7 @@ function AboutContent(props) {
         </div>
         <div></div>
       </div>
-      <ListProject title="Lastest projects" />
+      <ListProject title="Lastest projects" multipleTypes type="design" />
     </div>
   );
 }
