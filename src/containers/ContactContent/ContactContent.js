@@ -5,6 +5,7 @@ import {
 } from "@material-ui/icons";
 import React from "react";
 import ContactCard from "../../components/ContactCard/ContactCard";
+import ContactForm from "../../components/ContactForm/ContactForm";
 import useStyles from "./styles";
 
 function ContactContent(props) {
@@ -29,14 +30,19 @@ function ContactContent(props) {
   return (
     <div className={classes.root}>
       <div className={classes.container}>
-        {listContacts.map((contact, index) => (
-          <ContactCard
-            key={index}
-            icon={contact.icon}
-            contactInfo={contact.contactInfo}
-            content={contact.content}
-          />
-        ))}
+        <div className={classes.cardContainer}>
+          {listContacts.map((contact, index) => (
+            <ContactCard
+              key={index}
+              icon={contact.icon}
+              contactInfo={contact.contactInfo}
+              content={contact.content}
+            />
+          ))}
+        </div>
+        <div>
+          <ContactForm />
+        </div>
       </div>
     </div>
   );

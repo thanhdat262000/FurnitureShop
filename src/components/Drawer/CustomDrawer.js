@@ -68,7 +68,7 @@ function CustomDrawer({
                 >
                   <List disablePadding className={classes.nested}>
                     {menu.listSubMenu.map((subMenu, index) => (
-                      <ListItem className={classes.link}>
+                      <ListItem className={classes.link} key={index}>
                         <ListItemText>{subMenu}</ListItemText>
                       </ListItem>
                     ))}

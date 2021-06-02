@@ -9,6 +9,9 @@ const useStyles = makeStyles((theme) => ({
   container: {
     width: "95%",
     maxWidth: "1180px",
+  },
+  cardContainer: {
+    width: "100%",
     display: "flex",
     justifyContent: "space-between",
     [theme.breakpoints.down(780)]: {
