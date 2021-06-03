@@ -1,13 +1,13 @@
 import { Typography } from "@material-ui/core";
 import {
+  HomeWorkOutlined,
   MailOutlineRounded,
   PermPhoneMsgOutlined,
-  HomeWorkOutlined,
 } from "@material-ui/icons";
 import React from "react";
 import ContactCard from "../../components/ContactCard/ContactCard";
 import ContactForm from "../../components/ContactForm/ContactForm";
-import { Facebook, Instagram, Support } from "../../shared/icons";
+import { Facebook, Instagram } from "../../shared/icons";
 import useStyles from "./styles";
 
 function ContactContent(props) {

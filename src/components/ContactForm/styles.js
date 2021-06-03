@@ -5,7 +5,6 @@ const useStyles = makeStyles((theme) => ({
     width: "50%",
     display: "flex",
     boxShadow: theme.shadows[5],
-    display: "flex",
     justifyContent: "center",
     alignItems: "center",
     [theme.breakpoints.down(780)]: {

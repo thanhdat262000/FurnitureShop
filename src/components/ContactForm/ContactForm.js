@@ -1,6 +1,6 @@
 import { TextField, Typography } from "@material-ui/core";
 import React from "react";
-import { useForm, Controller } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import TopTitle from "../TopTitle/TopTitle";
 import useStyles from "./styles";
 function ContactForm(props) {
@@ -8,7 +8,6 @@ function ContactForm(props) {
   const {
     handleSubmit,
     control,
-    reset,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
