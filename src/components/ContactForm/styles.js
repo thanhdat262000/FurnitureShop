@@ -4,10 +4,14 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "50%",
     display: "flex",
-    boxShadow: theme.shadows[4],
+    boxShadow: theme.shadows[5],
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    [theme.breakpoints.down(780)]: {
+      width: "100%",
+      margin: "2rem 0",
+    },
   },
   container: {
     width: "80%",

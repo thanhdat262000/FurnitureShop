@@ -38,7 +38,7 @@ function ContactForm(props) {
       <div className={classes.container}>
         <TopTitle title="CONTACT US" />
         <Typography variant="h4" className={classes.mainTitle}>
-          Creattive project? Let's have a productive talk.
+          Creative project? Let's have a productive talk.
         </Typography>
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -74,7 +74,7 @@ function ContactForm(props) {
             />
           ))}
           <button type="submit" className={classes.submitButton}>
-            Send
+            <Typography>Send</Typography>
           </button>
         </form>
       </div>

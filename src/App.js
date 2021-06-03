@@ -5,7 +5,7 @@ import Footer from "./containers/Footer/Footer";
 import Header from "./containers/Header";
 import AboutPage from "./pages/About";
 import ContactPage from "./pages/Contact";
-import DesignPage from "./pages/Design";
+import DesignAndConstructionPage from "./pages/DesignAndConstruction";
 import HomePage from "./pages/Home";
 
 function App() {
@@ -18,7 +18,10 @@ function App() {
             <AboutPage />
           </Route>
           <Route path="/design">
-            <DesignPage />
+            <DesignAndConstructionPage />
+          </Route>
+          <Route path="/construction">
+            <DesignAndConstructionPage />
           </Route>
           <Route path="/contact">
             <ContactPage />

@@ -1,3 +1,4 @@
+import { Typography } from "@material-ui/core";
 import {
   MailOutlineRounded,
   PermPhoneMsgOutlined,
@@ -6,6 +7,7 @@ import {
 import React from "react";
 import ContactCard from "../../components/ContactCard/ContactCard";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import { Facebook, Instagram, Support } from "../../shared/icons";
 import useStyles from "./styles";
 
 function ContactContent(props) {
@@ -40,7 +42,32 @@ function ContactContent(props) {
             />
           ))}
         </div>
-        <div>
+        <div className={classes.formContainer}>
+          <div className={classes.intro}>
+            <Typography className={classes.bigTitle} variant="h2">
+              Liên hệ với chúng tôi ngay!
+            </Typography>
+            <Typography>
+              Để có thêm thông tin về các dự án đã và đang thi công hoặc tư vấn
+              về dự án của quý khách. Nhận tư vấn trực tiếp từ các kiến trúc sư
+              hàng đầu, quý khách vui lòng để lại thông tin cá nhân để chúng tôi
+              kịp thời hỗ trợ.
+            </Typography>
+            <div className={classes.iconContainer}>
+              <a href="https://fb.com" className={classes.link}>
+                <Facebook />
+              </a>
+              <a href="https://instagram.com" className={classes.link}>
+                <Instagram />
+              </a>
+              {/* <a href="tel:0123456789" className={classes.callSupport}>
+                <Support width={38} />
+                <Typography align="center" variant="h5">
+                  0123456789
+                </Typography>
+              </a> */}
+            </div>
+          </div>
           <ContactForm />
         </div>
       </div>

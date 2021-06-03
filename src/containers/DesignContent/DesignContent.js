@@ -3,13 +3,8 @@ import React from "react";
 import CategoryThumbnail from "../../components/CategoryThumbnail/CategoryThumbnail";
 import useStyles from "./styles";
 
-function DesignContent(props) {
+function DesignContent({ listThumbnails }) {
   const classes = useStyles();
-  const listThumbnails = [
-    { title: "Nội thất chung cư", img: "/img/noithat1.jpg" },
-    { title: "Nội thất khách sạn", img: "/img/noithat2.jpg" },
-    { title: "Nội thất nhà phố", img: "/img/noithat3.jpg" },
-  ];
   return (
     <div className={classes.root}>
       <div className={classes.container}>
