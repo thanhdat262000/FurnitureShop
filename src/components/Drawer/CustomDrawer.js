@@ -68,8 +68,13 @@ function CustomDrawer({
                 >
                   <List disablePadding className={classes.nested}>
                     {menu.listSubMenu.map((subMenu, index) => (
-                      <ListItem className={classes.link} key={index}>
-                        <ListItemText>{subMenu}</ListItemText>
+                      <ListItem
+                        className={clsx(classes.link, classes.linkText)}
+                        key={index}
+                        component="a"
+                        href={`/${subMenu.link}`}
+                      >
+                        <ListItemText>{subMenu.title}</ListItemText>
                       </ListItem>
                     ))}
                   </List>
@@ -86,58 +91,6 @@ function CustomDrawer({
               </ListItem>
             )
           )}
-          {/* <ListItem className={classes.link} component="a" href="/">
-            <ListItemText>TRANG CHỦ</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemText>GIỚI THIỆU</ListItemText>
-          </ListItem>
-          <ListItem button onClick={handleDesignMenu}>
-            <ListItemText>THIẾT KẾ</ListItemText>
-            {isDesignMenuOpen ? <ExpandLess /> : <ExpandMore />}
-          </ListItem>
-          <Collapse in={isDesignMenuOpen} unmountOnExit>
-            <List disablePadding className={classes.nested}>
-              <ListItem>
-                <ListItemText>THIẾT KẾ NỘI THẤT BIỆT THỰ</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>THIẾT KẾ NỘI THẤT KHÁCH SẠN</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>THIẾT KẾ NỘI THẤT CHUNG CƯ</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>THIẾT KẾ NỘI THẤT NHÀ PHỐ</ListItemText>
-              </ListItem>
-            </List>
-          </Collapse>
-          <ListItem button onClick={handleConstructionMenu}>
-            <ListItemText>THI CÔNG</ListItemText>
-            {isConstructionMenuOpen ? <ExpandLess /> : <ExpandMore />}
-          </ListItem>
-          <Collapse in={isConstructionMenuOpen} unmountOnExit>
-            <List disablePadding className={classes.nested}>
-              <ListItem>
-                <ListItemText>THI CÔNG NỘI THẤT BIỆT THỰ</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>THI CÔNG NỘI THẤT KHÁCH SẠN</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>THI CÔNG NỘI THẤT CHUNG CƯ</ListItemText>
-              </ListItem>
-              <ListItem>
-                <ListItemText>THI CÔNG NỘI THẤT NHÀ PHỐ</ListItemText>
-              </ListItem>
-            </List>
-          </Collapse>
-          <ListItem>
-            <ListItemText>TIN TỨC</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemText>LIÊN HỆ</ListItemText>
-          </ListItem> */}
         </List>
       </Drawer>
     </div>
