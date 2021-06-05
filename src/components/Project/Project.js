@@ -1,8 +1,8 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "./styles";
-function Project({ img, projectType, projectName }) {
-  const classes = useStyles();
+function Project({ img, projectType, projectName, category }) {
+  const classes = useStyles({ category });
   return (
     <div className={classes.root}>
       <div
@@ -18,17 +18,29 @@ function Project({ img, projectType, projectName }) {
             >
               {projectType}
             </Typography>
-            <Typography
-              component="p"
-              variant="h5"
-              align="center"
-              className={classes.projectName}
-            >
-              {projectName}
-            </Typography>
+            {!category && (
+              <Typography
+                component="p"
+                variant="h5"
+                align="center"
+                className={classes.projectName}
+              >
+                {projectName}
+              </Typography>
+            )}
           </div>
         </div>
       </div>
+      {category && (
+        <Typography
+          component="p"
+          variant="h5"
+          align="center"
+          className={classes.projectName}
+        >
+          {projectName}
+        </Typography>
+      )}
     </div>
   );
 }

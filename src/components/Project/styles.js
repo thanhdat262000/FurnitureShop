@@ -3,6 +3,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     height: "280px",
     display: "flex",
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     color: "white",
@@ -40,6 +41,8 @@ const useStyles = makeStyles((theme) => ({
   },
   projectName: {
     fontWeight: theme.typography.fontWeightBold,
+    color: (props) => (props.category ? "black" : "white"),
+    marginTop: (props) => (props.category ? "0.5rem" : 0),
   },
 }));
 export default useStyles;

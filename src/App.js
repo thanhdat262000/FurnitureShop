@@ -24,7 +24,7 @@ function App() {
           <Route path="/construction">
             <DesignAndConstructionPage />
           </Route>
-          <Route path="/apartment-design">
+          <Route path="/category/:category">
             <CategoryPage />
           </Route>
           <Route path="/contact">

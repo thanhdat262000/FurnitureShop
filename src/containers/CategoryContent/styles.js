@@ -19,5 +19,8 @@ const useStyles = makeStyles((theme) => ({
   title: {
     textTransform: "uppercase",
   },
+  categoryContainer: {
+    marginBottom: "3rem",
+  },
 }));
 export default useStyles;

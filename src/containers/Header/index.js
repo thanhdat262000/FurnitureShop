@@ -26,9 +26,12 @@ const Header = (props) => {
       title: "thiết kế",
       expand: true,
       listSubMenu: [
-        { title: "thiết kế nội thất chung cư", link: "apartment-design" },
-        { title: "thiết kế nội thất khách sạn", link: "hotel-design" },
-        { title: "thiết kế nội thất nhà phố", link: "house-design" },
+        {
+          title: "thiết kế nội thất chung cư",
+          link: "category/apartment-design",
+        },
+        { title: "thiết kế nội thất khách sạn", link: "category/hotel-design" },
+        { title: "thiết kế nội thất nhà phố", link: "category/house-design" },
       ],
       link: "design",
     },
@@ -36,9 +39,18 @@ const Header = (props) => {
       title: "thi công",
       expand: true,
       listSubMenu: [
-        { title: "thi công nội thất chung cư", link: "apartment-construction" },
-        { title: "thi công nội thất khách sạn", link: "hotel-construction" },
-        { title: "thi công nội thất nhà phố", link: "house-construction" },
+        {
+          title: "thi công nội thất chung cư",
+          link: "category/apartment-construction",
+        },
+        {
+          title: "thi công nội thất khách sạn",
+          link: "category/hotel-construction",
+        },
+        {
+          title: "thi công nội thất nhà phố",
+          link: "category/house-construction",
+        },
       ],
       link: "construction",
     },
