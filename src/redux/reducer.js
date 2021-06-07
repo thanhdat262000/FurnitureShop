@@ -7,7 +7,7 @@ import {
   GET_PROJECT_BY_ID_SUCCESS,
 } from "./action";
 
-let initialState = {
+var initialState = {
   loading: false,
   projects: [],
 };
@@ -20,8 +20,8 @@ export const reducer = (state = initialState, action) => {
     case GET_ALL_PROJECT_BY_SERVICE_SUCCESS:
     case GET_ALL_PROJECT_BY_CATEGORY_SUCCESS:
     case GET_PROJECT_BY_ID_SUCCESS:
-      return { ...state, loading: false, projects: action.payload };
+      return { ...state, loading: false, projects: action.payload.projects };
     default:
-      break;
+      return state;
   }
 };

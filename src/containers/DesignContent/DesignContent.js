@@ -18,6 +18,7 @@ function DesignContent({ listThumbnails }) {
             <CategoryThumbnail
               title={thumbnail.title}
               img={thumbnail.img}
+              link={thumbnail.link}
               key={index}
             />
           ))}

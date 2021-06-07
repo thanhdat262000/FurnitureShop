@@ -43,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: theme.typography.fontWeightBold,
     color: (props) => (props.category ? "black" : "white"),
     marginTop: (props) => (props.category ? "0.5rem" : 0),
+    width: "80%",
   },
 }));
 export default useStyles;

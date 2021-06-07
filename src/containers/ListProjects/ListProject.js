@@ -1,122 +1,19 @@
-import { Typography } from "@material-ui/core";
+import { CircularProgress, Typography } from "@material-ui/core";
 import Grid from "@material-ui/core/Grid";
 import clsx from "clsx";
-import React, { useState } from "react";
+import React from "react";
 import Project from "../../components/Project/Project";
 import useStyles from "./styles";
-function ListProject({ title, multipleTypes, type }) {
+
+function ListProject({
+  title,
+  multipleTypes,
+  type,
+  categoryList,
+  projectList,
+  onChangeCategory,
+}) {
   const classes = useStyles();
-  const [curCategory, setCurCategory] = useState(type);
-  const listProjects = [
-    {
-      type: "design",
-      list: [
-        {
-          img: "/img/project.png",
-          projectType: "Nội thất chung cư",
-          projectName: "Cohensive Library",
-        },
-        {
-          img: "/img/project.png",
-          projectType: "Nội thất chung cư",
-          projectName: "Cohensive Library",
-        },
-        {
-          img: "/img/project.png",
-          projectType: "Nội thất chung cư",
-          projectName: "Cohensive Library",
-        },
-        {
-          img: "/img/project.png",
-          projectType: "Nội thất chung cư",
-          projectName: "Cohensive Library",
-        },
-        {
-          img: "/img/project.png",
-          projectType: "Nội thất chung cư",
-          projectName: "Cohensive Library",
-        },
-        {
-          img: "/img/project.png",
-          projectType: "Nội thất chung cư",
-          projectName: "Cohensive Library",
-        },
-      ],
-    },
-    {
-      type: "construction",
-      list: [
-        {
-          img: "/img/project.png",
-          projectType: "Thi công chung cư",
-          projectName: "Cohensive Library",
-        },
-        {
-          img: "/img/project.png",
-          projectType: "Thi công chung cư",
-          projectName: "Cohensive Library",
-        },
-        {
-          img: "/img/project.png",
-          projectType: "Thi công chung cư",
-          projectName: "Cohensive Library",
-        },
-        {
-          img: "/img/project.png",
-          projectType: "Thi công chung cư",
-          projectName: "Cohensive Library",
-        },
-        {
-          img: "/img/project.png",
-          projectType: "Thi công chung cư",
-          projectName: "Cohensive Library",
-        },
-        {
-          img: "/img/project.png",
-          projectType: "Thi công chung cư",
-          projectName: "Cohensive Library",
-        },
-      ],
-    },
-    {
-      type: "all",
-      list: [
-        {
-          img: "/img/project.png",
-          projectType: "Nội thất chung cư",
-          projectName: "Cohensive Library",
-        },
-        {
-          img: "/img/project.png",
-          projectType: "Nội thất chung cư",
-          projectName: "Cohensive Library",
-        },
-        {
-          img: "/img/project.png",
-          projectType: "Nội thất chung cư",
-          projectName: "Cohensive Library",
-        },
-        {
-          img: "/img/project.png",
-          projectType: "Nội thất chung cư",
-          projectName: "Cohensive Library",
-        },
-        {
-          img: "/img/project.png",
-          projectType: "Nội thất chung cư",
-          projectName: "Cohensive Library",
-        },
-      ],
-    },
-  ];
-  const categories = [
-    { name: "Thiết kế nội thất", id: "design" },
-    { name: "Thi công nội thất", id: "construction" },
-    { name: "Xây nhà trọn gói", id: "all" },
-  ];
-  const onCategoryClick = (category) => {
-    setCurCategory(category);
-  };
   return (
     <div className={classes.root}>
       <div className={classes.container}>
@@ -126,15 +23,14 @@ function ListProject({ title, multipleTypes, type }) {
         {multipleTypes && (
           <div className={classes.categoryRoot}>
             <div className={classes.categoryContainer}>
-              {categories.map((category, index) => (
+              {categoryList.map((category, index) => (
                 <div
                   className={clsx({
                     [classes.categoryComponent]: true,
-                    [classes.categoryComponentActive]:
-                      category.id === curCategory,
+                    [classes.categoryComponentActive]: category.id === type,
                   })}
                   key={index}
-                  onClick={() => onCategoryClick(category.id)}
+                  onClick={() => onChangeCategory(category.id)}
                 >
                   <Typography>{category.name}</Typography>
                 </div>
@@ -142,20 +38,24 @@ function ListProject({ title, multipleTypes, type }) {
             </div>
           </div>
         )}
-        <Grid container spacing={3}>
-          {listProjects
-            .filter((list) => list.type === curCategory)[0]
-            .list.map((project, index) => (
+        {!projectList ? (
+          <CircularProgress />
+        ) : projectList.length > 0 ? (
+          <Grid container spacing={3}>
+            {projectList.map((project, index) => (
               <Grid item lg={4} md={6} sm={6} xs={12} key={index}>
                 <Project
                   key={index}
-                  img={project.img}
-                  projectType={project.projectType}
-                  projectName={project.projectName}
+                  img={project.img.url}
+                  projectType={project.category.actualName}
+                  projectName={project.name}
                 />
               </Grid>
             ))}
-        </Grid>
+          </Grid>
+        ) : (
+          <Typography>No project</Typography>
+        )}
       </div>
     </div>
   );

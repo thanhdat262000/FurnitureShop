@@ -1,10 +1,33 @@
 import { Typography } from "@material-ui/core";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  GET_ALL_PROJECT_BY_SERVICE,
+  GET_LATEST_PROJECTS,
+} from "../../redux/action";
+import { projectsSelector } from "../../redux/selector";
 import ListProject from "../ListProjects/ListProject";
 import useStyles from "./styles";
 
 function AboutContent(props) {
   const classes = useStyles();
+  const categoryList = [
+    { name: "Thiết kế nội thất", id: "design" },
+    { name: "Thi công nội thất", id: "construction" },
+    { name: "Xây nhà trọn gói", id: "all" },
+  ];
+  const [curCategory, setCurCategory] = useState("design");
+  const onChangeCategory = (id) => {
+    setCurCategory(id);
+  };
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch({
+      type: GET_ALL_PROJECT_BY_SERVICE,
+      payload: { service: curCategory },
+    });
+  }, [dispatch, curCategory]);
+  const projects = useSelector(projectsSelector);
   return (
     <div className={classes.root}>
       <div className={classes.container}>
@@ -88,7 +111,14 @@ function AboutContent(props) {
         </div>
         <div></div>
       </div>
-      <ListProject title="Lastest projects" multipleTypes type="design" />
+      <ListProject
+        title="Latest projects"
+        multipleTypes={true}
+        type={curCategory}
+        onChangeCategory={onChangeCategory}
+        projectList={projects}
+        categoryList={categoryList}
+      />
     </div>
   );
 }

@@ -3,7 +3,7 @@ import React from "react";
 import Project from "../../components/Project/Project";
 import useStyles from "./styles";
 
-function CategoryContent({ serviceType, categoryType }) {
+function CategoryContent({ serviceType, categoryType, projectList }) {
   const classes = useStyles();
   const listProjects = [
     {
@@ -47,14 +47,14 @@ function CategoryContent({ serviceType, categoryType }) {
         </div>
         <div className={classes.categoryContainer}>
           <Grid container spacing={3}>
-            {listProjects.map((project, index) => (
+            {projectList.map((project, index) => (
               <Grid item lg={4} md={6} sm={6} xs={12} key={index}>
                 <Project
                   category={true}
                   key={index}
-                  img={project.img}
-                  projectType={project.projectType}
-                  projectName={project.projectName}
+                  img={project.img.url}
+                  projectType={project.category.actualName}
+                  projectName={project.name}
                 />
               </Grid>
             ))}

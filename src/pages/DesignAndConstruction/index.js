@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from "react-router";
 import DesignContent from "../../containers/DesignContent/DesignContent";
+import useStyles from "./styles";
 import ListProject from "../../containers/ListProjects/ListProject";
 import OpeningModal from "../../containers/OpeningModal/OpeningModal";
+import { GET_ALL_PROJECT_BY_SERVICE } from "../../redux/action";
+import { projectsSelector } from "../../redux/selector";
 
 function DesignAndConstruction(props) {
+  const classes = useStyles();
+
   const listContents = [
     {
       type: "design",
@@ -14,12 +20,23 @@ function DesignAndConstruction(props) {
         introContent:
           "We are proud to present our work. These projects are built using latest technologies and best talents. The benefits of our methods guarantee quality for many years to come.",
         listThumbnails: [
-          { title: "Nội thất chung cư", img: "/img/noithat1.jpg" },
-          { title: "Nội thất khách sạn", img: "/img/noithat2.jpg" },
-          { title: "Nội thất nhà phố", img: "/img/noithat3.jpg" },
+          {
+            title: "Nội thất chung cư",
+            img: "/img/noithat1.jpg",
+            link: "category/apartment-design",
+          },
+          {
+            title: "Nội thất khách sạn",
+            img: "/img/noithat2.jpg",
+            link: "category/hotel-design",
+          },
+          {
+            title: "Nội thất nhà phố",
+            img: "/img/noithat3.jpg",
+            link: "category/house-design",
+          },
         ],
         listProjectsTitle: "Một số dự án thiết kế nội thất",
-        listProjectsType: "design",
       },
     },
     {
@@ -30,12 +47,23 @@ function DesignAndConstruction(props) {
         introContent:
           "We are proud to present our work. These projects are built using latest technologies and best talents. The benefits of our methods guarantee quality for many years to come.",
         listThumbnails: [
-          { title: "Thi công chung cư", img: "/img/noithat1.jpg" },
-          { title: "Thi công khách sạn", img: "/img/noithat2.jpg" },
-          { title: "Thi công nhà phố", img: "/img/noithat3.jpg" },
+          {
+            title: "Thi công chung cư",
+            img: "/img/noithat1.jpg",
+            link: "category/apartment-construction",
+          },
+          {
+            title: "Thi công khách sạn",
+            img: "/img/noithat2.jpg",
+            link: "category/hotel-construction",
+          },
+          {
+            title: "Thi công nhà phố",
+            img: "/img/noithat3.jpg",
+            link: "category/house-construction",
+          },
         ],
         listProjectsTitle: "Một số dự án thi công nội thất",
-        listProjectsType: "construction",
       },
     },
   ];
@@ -44,8 +72,13 @@ function DesignAndConstruction(props) {
   const pageContent = listContents.filter(
     (content) => content.type === path
   )[0];
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch({ type: GET_ALL_PROJECT_BY_SERVICE, payload: { service: path } });
+  }, [dispatch, path]);
+  const projects = useSelector(projectsSelector);
   return (
-    <div>
+    <div className={classes.root}>
       <OpeningModal
         topTitle={pageContent.content.introTopTitle}
         mainTitle={pageContent.content.introMainTitle}
@@ -54,7 +87,7 @@ function DesignAndConstruction(props) {
       <DesignContent listThumbnails={pageContent.content.listThumbnails} />
       <ListProject
         title={pageContent.content.listProjectsTitle}
-        type={pageContent.content.listProjectsType}
+        projectList={projects}
       />
     </div>
   );

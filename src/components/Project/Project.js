@@ -7,28 +7,26 @@ function Project({ img, projectType, projectName, category }) {
     <div className={classes.root}>
       <div
         className={classes.container}
-        style={{ backgroundImage: "url(/img/project.png)" }}
+        style={{ backgroundImage: `url(${img})` }}
       >
         <div id="project-overlay" className={classes.overlay}>
-          <div>
+          <Typography
+            component="p"
+            align="center"
+            className={classes.projectType}
+          >
+            {projectType}
+          </Typography>
+          {!category && (
             <Typography
               component="p"
+              variant="h5"
               align="center"
-              className={classes.projectType}
+              className={classes.projectName}
             >
-              {projectType}
+              {projectName}
             </Typography>
-            {!category && (
-              <Typography
-                component="p"
-                variant="h5"
-                align="center"
-                className={classes.projectName}
-              >
-                {projectName}
-              </Typography>
-            )}
-          </div>
+          )}
         </div>
       </div>
       {category && (
