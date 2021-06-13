@@ -7,7 +7,7 @@ import useStyles from "./styles";
 function ContactForm(props) {
   const classes = useStyles();
   const [isLoading, setIsLoading] = useState(false);
-  const [sendSuccess, setSendSuccess] = useState("");
+  const [sendStatus, setSendStatus] = useState("");
   const {
     handleSubmit,
     control,
@@ -15,12 +15,14 @@ function ContactForm(props) {
   } = useForm();
   const onSubmit = (data) => {
     setIsLoading(true);
-    createCustomer(data).then((response) => {
-      setIsLoading(false);
-      if (response.status === 200) {
-        setSendSuccess("Send successfully!");
-      } else setSendSuccess("An error occur!");
-    });
+    createCustomer(data)
+      .then((response) => {
+        setIsLoading(false);
+        if (response.status === 200) {
+          setSendStatus("Send successfully!");
+        } else setSendStatus("An error occur!");
+      })
+      .catch((error) => setSendStatus("Error!"));
   };
   const listInput = [
     { name: "name", label: "Name" },
@@ -94,7 +96,7 @@ function ContactForm(props) {
             {isLoading ? (
               <CircularProgress />
             ) : (
-              <Typography>{sendSuccess}</Typography>
+              <Typography>{sendStatus}</Typography>
             )}
           </div>
         </form>
