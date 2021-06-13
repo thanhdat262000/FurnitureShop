@@ -45,8 +45,9 @@ function ListProject({
             {projectList.map((project, index) => (
               <Grid item lg={4} md={6} sm={6} xs={12} key={index}>
                 <Project
+                  id={project.id}
                   key={index}
-                  img={project.img.url}
+                  img={project?.img?.url}
                   projectType={project.category.actualName}
                   projectName={project.name}
                 />

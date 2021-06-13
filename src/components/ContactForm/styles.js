@@ -44,5 +44,11 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     cursor: "pointer",
   },
+  sendStatus: {
+    marginTop: "1rem",
+    "& p": {
+      fontWeight: theme.typography.fontWeightBold,
+    },
+  },
 }));
 export default useStyles;

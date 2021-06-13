@@ -1,6 +1,7 @@
 import { fade, makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
+    textDecoration: "none",
     height: "280px",
     display: "flex",
     flexDirection: "column",
@@ -26,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
   overlay: {
     width: "100%",
     height: 0,
-    backgroundColor: fade(theme.palette.common.black, 0.2),
+    backgroundColor: fade(theme.palette.common.black, 0.4),
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -44,6 +45,22 @@ const useStyles = makeStyles((theme) => ({
     color: (props) => (props.category ? "black" : "white"),
     marginTop: (props) => (props.category ? "0.5rem" : 0),
     width: "80%",
+  },
+  projectEnter: {
+    opacity: 0,
+    transform: "scale(0.9)",
+  },
+  projectEnterActive: {
+    opacity: 1,
+    transform: "translate(0)",
+    transition: "opacity 300ms, transform 300ms",
+  },
+  projectExit: {
+    opacity: "1",
+  },
+  projectExitActive: {
+    opacity: 0,
+    transition: "opacity 300ms, transform 300ms",
   },
 }));
 export default useStyles;

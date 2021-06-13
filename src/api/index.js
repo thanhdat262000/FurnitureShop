@@ -1,5 +1,5 @@
 import axios from "axios";
-axios.defaults.baseURL = "http://localhost:1337/";
+axios.defaults.baseURL = "https://newfurniture-admin.herokuapp.com/";
 export const getALLProjectsByService = async (service) => {
   const response = await axios.get(
     `/projects?category.service.name=${service}`
@@ -16,5 +16,9 @@ export const getProjectById = async (projectId) => {
 };
 export const getLatestProjects = async () => {
   const response = await axios.get("/projects?_sort=created_at:desc");
+  return response;
+};
+export const createCustomer = async (customer) => {
+  const response = await axios.post("/customers", customer);
   return response;
 };

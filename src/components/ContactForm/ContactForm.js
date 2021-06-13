@@ -1,16 +1,27 @@
-import { TextField, Typography } from "@material-ui/core";
-import React from "react";
+import { CircularProgress, TextField, Typography } from "@material-ui/core";
+import React, { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
+import { createCustomer } from "../../api";
 import TopTitle from "../TopTitle/TopTitle";
 import useStyles from "./styles";
 function ContactForm(props) {
   const classes = useStyles();
+  const [isLoading, setIsLoading] = useState(false);
+  const [sendSuccess, setSendSuccess] = useState("");
   const {
     handleSubmit,
     control,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    setIsLoading(true);
+    createCustomer(data).then((response) => {
+      setIsLoading(false);
+      if (response.status === 200) {
+        setSendSuccess("Send successfully!");
+      } else setSendSuccess("An error occur!");
+    });
+  };
   const listInput = [
     { name: "name", label: "Name" },
     { name: "address", label: "Address" },
@@ -66,15 +77,26 @@ function ContactForm(props) {
                       ? "This field is required"
                       : errors[input.name]?.type === "pattern"
                       ? "Invalid email"
+                      : errors[input.name]?.type === "min" ||
+                        errors[input.name]?.type === "max"
+                      ? "Invalid age"
                       : ""
                   }
                 />
               )}
             />
           ))}
+
           <button type="submit" className={classes.submitButton}>
             <Typography>Send</Typography>
           </button>
+          <div className={classes.sendStatus}>
+            {isLoading ? (
+              <CircularProgress />
+            ) : (
+              <Typography>{sendSuccess}</Typography>
+            )}
+          </div>
         </form>
       </div>
     </div>

@@ -5,44 +5,19 @@ import useStyles from "./styles";
 
 function CategoryContent({ serviceType, categoryType, projectList }) {
   const classes = useStyles();
-  const listProjects = [
-    {
-      img: "/img/project.png",
-      projectType: "Nội thất chung cư",
-      projectName: "Cohensive Library",
-    },
-    {
-      img: "/img/project.png",
-      projectType: "Nội thất chung cư",
-      projectName: "Cohensive Library",
-    },
-    {
-      img: "/img/project.png",
-      projectType: "Nội thất chung cư",
-      projectName: "Cohensive Library",
-    },
-    {
-      img: "/img/project.png",
-      projectType: "Nội thất chung cư",
-      projectName: "Cohensive Library",
-    },
-    {
-      img: "/img/project.png",
-      projectType: "Nội thất chung cư",
-      projectName: "Cohensive Library",
-    },
-    {
-      img: "/img/project.png",
-      projectType: "Nội thất chung cư",
-      projectName: "Cohensive Library",
-    },
-  ];
+  const service = serviceType === "design" ? "Thiết kế" : "Thi công";
+  const category =
+    categoryType === "apartment"
+      ? "chung cư"
+      : categoryType === "hotel"
+      ? "khách sạn"
+      : "nhà phố";
   return (
     <div className={classes.root}>
       <div className={classes.container}>
         <div className={classes.titleContainer}>
           <Typography className={classes.title} variant="h4">
-            thiết kế nội thất chung cư
+            {`${service} nội thất ${category}`}
           </Typography>
         </div>
         <div className={classes.categoryContainer}>
@@ -50,6 +25,7 @@ function CategoryContent({ serviceType, categoryType, projectList }) {
             {projectList.map((project, index) => (
               <Grid item lg={4} md={6} sm={6} xs={12} key={index}>
                 <Project
+                  id={project.id}
                   category={true}
                   key={index}
                   img={project.img.url}

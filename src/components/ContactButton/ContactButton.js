@@ -6,7 +6,7 @@ import useStyles from "./styles";
 function ContactButton(props) {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <a href="/contact" className={classes.root}>
       <div className={classes.container}>
         <Typography
           className={classes.title}
@@ -18,7 +18,7 @@ function ContactButton(props) {
         </Typography>
         <NavigateNextOutlined className={classes.svg} />
       </div>
-    </div>
+    </a>
   );
 }
 

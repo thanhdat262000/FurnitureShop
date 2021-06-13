@@ -18,8 +18,8 @@ function CategoryPage(props) {
   return (
     <div>
       <OpeningModal
-        topTitle="apartment"
-        mainTitle="Apartment design"
+        topTitle={arrCategoryType[0]}
+        mainTitle={`${arrCategoryType[0]} ${arrCategoryType[1]}`}
         content="We are proud to present our work. These projects are built using latest technologies and best talents. The benefits of our methods guarantee quality for many years to come."
       />
       <CategoryContent

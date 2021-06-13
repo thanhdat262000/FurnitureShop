@@ -1,23 +1,47 @@
 import { Typography } from "@material-ui/core";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import React from "react";
 import useStyles from "./styles";
-function Project({ img, projectType, projectName, category }) {
+function Project({ img, projectType, projectName, category, id }) {
   const classes = useStyles({ category });
   return (
-    <div className={classes.root}>
-      <div
-        className={classes.container}
-        style={{ backgroundImage: `url(${img})` }}
+    <TransitionGroup>
+      <CSSTransition
+        key={id}
+        timeout={300}
+        classNames={{
+          enter: classes.projectEnter,
+          enterActive: classes.projectEnterActive,
+          exit: classes.projectExit,
+          exitActive: classes.projectExitActive,
+        }}
       >
-        <div id="project-overlay" className={classes.overlay}>
-          <Typography
-            component="p"
-            align="center"
-            className={classes.projectType}
+        <a href={`/project/${id}`} className={classes.root}>
+          <div
+            className={classes.container}
+            style={{ backgroundImage: `url(${img})` }}
           >
-            {projectType}
-          </Typography>
-          {!category && (
+            <div id="project-overlay" className={classes.overlay}>
+              <Typography
+                component="p"
+                align="center"
+                className={classes.projectType}
+              >
+                {projectType}
+              </Typography>
+              {!category && (
+                <Typography
+                  component="p"
+                  variant="h5"
+                  align="center"
+                  className={classes.projectName}
+                >
+                  {projectName}
+                </Typography>
+              )}
+            </div>
+          </div>
+          {category && (
             <Typography
               component="p"
               variant="h5"
@@ -27,19 +51,9 @@ function Project({ img, projectType, projectName, category }) {
               {projectName}
             </Typography>
           )}
-        </div>
-      </div>
-      {category && (
-        <Typography
-          component="p"
-          variant="h5"
-          align="center"
-          className={classes.projectName}
-        >
-          {projectName}
-        </Typography>
-      )}
-    </div>
+        </a>
+      </CSSTransition>
+    </TransitionGroup>
   );
 }
 

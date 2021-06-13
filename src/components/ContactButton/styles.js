@@ -2,6 +2,8 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    textDecoration: "none",
+    color: "black",
     position: "relative",
     width: "100%",
     display: "flex",

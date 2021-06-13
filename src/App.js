@@ -8,6 +8,7 @@ import CategoryPage from "./pages/Category";
 import ContactPage from "./pages/Contact";
 import DesignAndConstructionPage from "./pages/DesignAndConstruction";
 import HomePage from "./pages/Home";
+import ProjectPage from "./pages/Project";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <ContactPage />
+          </Route>
+          <Route path="/project/:id">
+            <ProjectPage />
           </Route>
           <Route path="/">
             <HomePage />
