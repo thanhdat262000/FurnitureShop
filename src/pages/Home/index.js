@@ -8,7 +8,7 @@ import ListServiceDetails from "../../containers/ListServiceDetails/ListServiceD
 import ListServices from "../../containers/ListServices/ListServices";
 import ListStep from "../../containers/ListStep/ListStep";
 import { GET_ALL_PROJECT_BY_SERVICE } from "../../redux/action";
-import { projectsSelector } from "../../redux/selector";
+import { loadingSelector, projectsSelector } from "../../redux/selector";
 import useStyles from "./styles";
 
 function HomePage(props) {
@@ -30,6 +30,7 @@ function HomePage(props) {
     });
   }, [dispatch, curCategory]);
   const projects = useSelector(projectsSelector);
+  const loading = useSelector(loadingSelector);
   return (
     <div className={classes.root}>
       <Slider />
@@ -44,6 +45,7 @@ function HomePage(props) {
         onChangeCategory={onChangeCategory}
         projectList={projects}
         categoryList={categoryList}
+        loading={loading}
       />
       <ListStep />
     </div>

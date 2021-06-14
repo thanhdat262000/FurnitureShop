@@ -21,6 +21,8 @@ const useStyles = makeStyles((theme) => ({
   },
   categoryContainer: {
     marginBottom: "3rem",
+    display: "flex",
+    justifyContent: "center",
   },
 }));
 export default useStyles;

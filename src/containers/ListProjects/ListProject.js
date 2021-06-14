@@ -12,6 +12,7 @@ function ListProject({
   categoryList,
   projectList,
   onChangeCategory,
+  loading,
 }) {
   const classes = useStyles();
   return (
@@ -38,7 +39,7 @@ function ListProject({
             </div>
           </div>
         )}
-        {!projectList ? (
+        {loading ? (
           <CircularProgress />
         ) : projectList.length > 0 ? (
           <Grid container spacing={3}>
@@ -62,4 +63,4 @@ function ListProject({
   );
 }
 
-export default ListProject;
+export default React.memo(ListProject);

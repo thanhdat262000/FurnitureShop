@@ -1,9 +1,9 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, CircularProgress } from "@material-ui/core";
 import React from "react";
 import Project from "../../components/Project/Project";
 import useStyles from "./styles";
 
-function CategoryContent({ serviceType, categoryType, projectList }) {
+function CategoryContent({ serviceType, categoryType, projectList, loading }) {
   const classes = useStyles();
   const service = serviceType === "design" ? "Thiết kế" : "Thi công";
   const category =
@@ -21,20 +21,24 @@ function CategoryContent({ serviceType, categoryType, projectList }) {
           </Typography>
         </div>
         <div className={classes.categoryContainer}>
-          <Grid container spacing={3}>
-            {projectList.map((project, index) => (
-              <Grid item lg={4} md={6} sm={6} xs={12} key={index}>
-                <Project
-                  id={project.id}
-                  category={true}
-                  key={index}
-                  img={project.img.url}
-                  projectType={project.category.actualName}
-                  projectName={project.name}
-                />
-              </Grid>
-            ))}
-          </Grid>
+          {loading ? (
+            <CircularProgress />
+          ) : (
+            <Grid container spacing={3}>
+              {projectList.map((project, index) => (
+                <Grid item lg={4} md={6} sm={6} xs={12} key={index}>
+                  <Project
+                    id={project.id}
+                    category={true}
+                    key={index}
+                    img={project.img.url}
+                    projectType={project.category.actualName}
+                    projectName={project.name}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          )}
         </div>
       </div>
     </div>

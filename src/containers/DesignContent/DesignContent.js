@@ -28,4 +28,4 @@ function DesignContent({ listThumbnails }) {
   );
 }
 
-export default DesignContent;
+export default React.memo(DesignContent);

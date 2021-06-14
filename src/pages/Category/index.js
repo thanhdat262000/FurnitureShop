@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 import CategoryContent from "../../containers/CategoryContent/CategoryContent";
 import OpeningModal from "../../containers/OpeningModal/OpeningModal";
 import { GET_ALL_PROJECT_BY_CATEGORY } from "../../redux/action";
-import { projectsSelector } from "../../redux/selector";
+import { loadingSelector, projectsSelector } from "../../redux/selector";
 
 function CategoryPage(props) {
   const { category } = useParams();
@@ -14,6 +14,7 @@ function CategoryPage(props) {
     dispatch({ type: GET_ALL_PROJECT_BY_CATEGORY, payload: { category } });
   }, [dispatch, category]);
   const projects = useSelector(projectsSelector);
+  const loading = useSelector(loadingSelector);
   const arrCategoryType = category.split("-");
   return (
     <div>
@@ -26,6 +27,7 @@ function CategoryPage(props) {
         serviceType={arrCategoryType[1]}
         categoryType={arrCategoryType[0]}
         projectList={projects}
+        loading={loading}
       />
     </div>
   );
