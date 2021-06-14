@@ -28,13 +28,13 @@ function Slider(props) {
         )}
       >
         <div className={classes.imageContainer}>
-          <img src="/img/slider_1.jpg" alt="slider1" />
+          <img src="/img/slider_1.jpg" alt="noithat1" />
         </div>
         <div className={classes.imageContainer}>
-          <img src="/img/slider_2.jpg" alt="slider1" />
+          <img src="/img/slider_2.jpg" alt="noithat2" />
         </div>
         <div className={classes.imageContainer}>
-          <img src="/img/slider_3.jpg" alt="slider1" />
+          <img src="/img/slider_3.jpg" alt="noithat3" />
         </div>
       </Carousel>
     </div>

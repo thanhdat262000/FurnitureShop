@@ -4,10 +4,10 @@ import AddIcon from "@material-ui/icons/Add";
 import useStyles from "./styles";
 import TopTitle from "../TopTitle/TopTitle";
 import CommonButton from "../CommomButton/CommonButton";
-function ServiceDetail({ img, title, intro }) {
+function ServiceDetail({ img, title, intro, link }) {
   const classes = useStyles();
   return !intro ? (
-    <a href="#" className={classes.root}>
+    <a href={link} className={classes.root}>
       <div className={classes.container}>
         <div
           className={classes.image}

@@ -5,9 +5,13 @@ function ListServiceDetails(props) {
   const classes = useStyles();
   const serviceDetails = [
     { intro: true },
-    { img: "/img/design.png", title: "THIẾT KẾ NỘI THẤT" },
-    { img: "/img/design1.png", title: "THIẾT KẾ KIẾN TRÚC" },
-    { img: "/img/design2.png", title: "PHÂN PHỐI NỘI THẤT GỖ" },
+    { img: "/img/design.png", title: "THIẾT KẾ NỘI THẤT", link: "/desgin" },
+    {
+      img: "/img/design1.png",
+      title: "THIẾT KẾ KIẾN TRÚC",
+      link: "/construction",
+    },
+    { img: "/img/design2.png", title: "THI CÔNG NỘI THẤT", link: "/" },
   ];
   return (
     <div className={classes.root}>
@@ -18,6 +22,7 @@ function ListServiceDetails(props) {
               img={serviceDetail.img}
               title={serviceDetail.title}
               key={index}
+              link={serviceDetail.link}
             />
           ) : (
             <ServiceDetail intro={serviceDetail.intro} key={index} />
