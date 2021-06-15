@@ -27,5 +27,9 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     textDecoration: "none",
   },
+  onMenuClick: {
+    backgroundColor: theme.palette.primary.main,
+    color: fade(theme.palette.common.white, 0.8),
+  },
 }));
 export default useStyles;

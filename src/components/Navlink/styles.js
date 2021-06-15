@@ -117,5 +117,16 @@ const useStyles = makeStyles((theme) => ({
     opacity: 0,
     transition: "opacity 300ms, transform 300ms",
   },
+  onMenuClick: {
+    "& #liner": {
+      width: "calc(100% + 0.5rem)",
+    },
+    "& p, svg": {
+      color: fade(theme.palette.common.white, 0.8),
+    },
+  },
+  onSubMenuClick: {
+    backgroundColor: theme.palette.primary.main,
+  },
 }));
 export default useStyles;

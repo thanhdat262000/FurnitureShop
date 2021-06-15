@@ -8,7 +8,6 @@ import { loadingSelector, projectsSelector } from "../../redux/selector";
 
 function CategoryPage(props) {
   const { category } = useParams();
-  console.log(category);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch({ type: GET_ALL_PROJECT_BY_CATEGORY, payload: { category } });

@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core";
 import clsx from "clsx";
 import useStyles from "./styles";
+import { useLocation } from "react-router";
 function CustomDrawer({
   isDesignMenuOpen,
   isOpen,
@@ -20,6 +21,7 @@ function CustomDrawer({
   listMenu,
 }) {
   const classes = useStyles();
+  const { pathname } = useLocation();
   return (
     <div className={classes.root}>
       <Drawer
@@ -33,7 +35,11 @@ function CustomDrawer({
             menu.expand ? (
               <div key={index}>
                 <ListItem
-                  className={clsx(classes.link, classes.linkText)}
+                  className={clsx({
+                    [classes.link]: true,
+                    [classes.linkText]: true,
+                    [classes.onMenuClick]: menu.link === pathname,
+                  })}
                   button
                   onClick={
                     menu.title === "thiết kế"
@@ -42,7 +48,7 @@ function CustomDrawer({
                   }
                 >
                   <ListItemText>
-                    <a href={`/${menu.link}`} className={classes.linkText}>
+                    <a href={menu.link} className={classes.linkText}>
                       {menu.title}
                     </a>
                   </ListItemText>
@@ -69,10 +75,14 @@ function CustomDrawer({
                   <List disablePadding className={classes.nested}>
                     {menu.listSubMenu.map((subMenu, index) => (
                       <ListItem
-                        className={clsx(classes.link, classes.linkText)}
+                        className={clsx({
+                          [classes.link]: true,
+                          [classes.linkText]: true,
+                          [classes.onMenuClick]: subMenu.link === pathname,
+                        })}
                         key={index}
                         component="a"
-                        href={`/${subMenu.link}`}
+                        href={subMenu.link}
                       >
                         <ListItemText>{subMenu.title}</ListItemText>
                       </ListItem>
@@ -83,9 +93,13 @@ function CustomDrawer({
             ) : (
               <ListItem
                 key={index}
-                className={clsx(classes.link, classes.linkText)}
+                className={clsx({
+                  [classes.link]: true,
+                  [classes.linkText]: true,
+                  [classes.onMenuClick]: menu.link === pathname,
+                })}
                 component="a"
-                href={`/${menu.link}`}
+                href={menu.link}
               >
                 <ListItemText>{menu.title}</ListItemText>
               </ListItem>

@@ -6,7 +6,9 @@ import {
   Typography,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import clsx from "clsx";
 import React, { useState } from "react";
+import { useLocation } from "react-router";
 import { CSSTransition } from "react-transition-group";
 import useStyles from "./styles";
 
@@ -19,9 +21,16 @@ function Navlink({ title, listMenu, expand, link }) {
   const handleClose = () => {
     setIsMenuOpen(false);
   };
+  const { pathname } = useLocation();
   return (
-    <div className={classes.root} onMouseLeave={handleClose}>
-      <a href={`/${link}`} onMouseEnter={handleHover} className={classes.link}>
+    <div
+      className={clsx({
+        [classes.root]: true,
+        [classes.onMenuClick]: pathname === link,
+      })}
+      onMouseLeave={handleClose}
+    >
+      <a href={link} onMouseEnter={handleHover} className={classes.link}>
         <div className={classes.titleContainer}>
           <Typography className={classes.title}>{title}</Typography>
           {expand && <ExpandMoreIcon className={classes.expandIcon} />}
@@ -45,10 +54,13 @@ function Navlink({ title, listMenu, expand, link }) {
               {listMenu &&
                 listMenu.map((menu, index) => (
                   <ListItem
-                    className={classes.menuItem}
+                    className={clsx({
+                      [classes.menuItem]: true,
+                      [classes.onSubMenuClick]: menu.link === pathname,
+                    })}
                     button
                     component="a"
-                    href={`/${menu.link}`}
+                    href={menu.link}
                     key={index}
                   >
                     <ListItemText>{menu.title}</ListItemText>{" "}

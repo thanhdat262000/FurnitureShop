@@ -20,8 +20,6 @@ function* getALLProjectsByService(action) {
       api.getALLProjectsByService,
       action.payload.service
     );
-    console.log(projects);
-
     yield put({
       type: GET_ALL_PROJECT_BY_SERVICE_SUCCESS,
       payload: { projects: projects.data },

@@ -5,6 +5,7 @@ import { IconButton } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import useStyles from "./styles";
 import CustomDrawer from "../../components/Drawer/CustomDrawer";
+import { useLocation } from "react-router";
 const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDesignMenuOpen, setDesignMenu] = useState(false);
@@ -20,20 +21,23 @@ const Header = (props) => {
     setConstructionMenu(!isConstructionMenuOpen);
   };
   const listMenu = [
-    { title: "trang chủ", link: "" },
-    { title: "giới thiệu", link: "about" },
+    { title: "trang chủ", link: "/" },
+    { title: "giới thiệu", link: "/about" },
     {
       title: "thiết kế",
       expand: true,
       listSubMenu: [
         {
           title: "thiết kế nội thất chung cư",
-          link: "category/apartment-design",
+          link: "/category/apartment-design",
         },
-        { title: "thiết kế nội thất khách sạn", link: "category/hotel-design" },
-        { title: "thiết kế nội thất nhà phố", link: "category/house-design" },
+        {
+          title: "thiết kế nội thất khách sạn",
+          link: "/category/hotel-design",
+        },
+        { title: "thiết kế nội thất nhà phố", link: "/category/house-design" },
       ],
-      link: "design",
+      link: "/design",
     },
     {
       title: "thi công",
@@ -41,21 +45,21 @@ const Header = (props) => {
       listSubMenu: [
         {
           title: "thi công nội thất chung cư",
-          link: "category/apartment-construction",
+          link: "/category/apartment-construction",
         },
         {
           title: "thi công nội thất khách sạn",
-          link: "category/hotel-construction",
+          link: "/category/hotel-construction",
         },
         {
           title: "thi công nội thất nhà phố",
-          link: "category/house-construction",
+          link: "/category/house-construction",
         },
       ],
-      link: "construction",
+      link: "/construction",
     },
-    { title: "tin tức", link: "news" },
-    { title: "liên hệ", link: "contact" },
+    { title: "tin tức", link: "/news" },
+    { title: "liên hệ", link: "/contact" },
   ];
   return (
     <div className={classes.root}>
